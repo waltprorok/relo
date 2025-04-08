@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use Spatie\Honeypot\ProtectAgainstSpam;
 
 /*
 |--------------------------------------------------------------------------
@@ -13,10 +14,11 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('marketing.home');
-});
-
 Auth::routes();
 
+Route::view('/', 'marketing.home')->name('home');
+Route::post('/contact', [App\Http\Controllers\HomeController::class, 'contact'])->name('contact')->middleware(ProtectAgainstSpam::class);
+
 Route::get('/dashboard', [App\Http\Controllers\HomeController::class, 'index'])->name('dashboard');
+
+

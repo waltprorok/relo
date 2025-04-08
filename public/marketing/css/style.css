@@ -737,7 +737,7 @@ ul.dropdown-menu li {
 }
 
 /*-------------------------
- HOME -2 
+ HOME -2
 -----------------------------*/
 #banner {
   position: relative;
@@ -783,7 +783,7 @@ ul.dropdown-menu li {
 
 #banner-4 {
   position: relative;
-  background: url("../images/banner/banner-2.jpg") no-repeat;
+  background: url("../images/banner/about.jpg") no-repeat;
   background-size: cover;
 }
 

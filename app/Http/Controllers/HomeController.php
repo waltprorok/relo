@@ -26,4 +26,9 @@ class HomeController extends Controller
     {
         return view('webapp.home');
     }
+
+    public function contact()
+    {
+        //
+    }
 }
