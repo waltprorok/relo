@@ -106,7 +106,7 @@
 
                     <!-- Subheading -->
                     <p class="lead mb-5 pr-0">
-                        Relo is an experienced service helping our clients get from one location to their next.
+                        Relo is an experienced service provider helping our clients get from one location to their next.
                     </p>
 
                     <!-- Button -->
