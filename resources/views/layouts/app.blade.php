@@ -110,10 +110,10 @@
                 <div class="footer-widget">
                     <!-- Brand -->
                     <a href="index.html" class="footer-brand text-white">
-                        Rappo
+                        Relo
                     </a>
-                    <p>Each theme featured at the Bootstrap marketplace has been reviewed by Bootstrap's creators.Lorem ipsum
-                        dolor sit amet, consectetur adipisicing elit.</p>
+                    <p>Moving can be tricky, whether is up the road or across the country it helps to have a professional by your side.
+                    </p>
                 </div>
             </div>
 
