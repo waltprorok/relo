@@ -180,7 +180,7 @@
 
                         <li>
                             <a href="{{ route('contact.create') }}">
-                                Contact
+                                Contact Us
                             </a>
                         </li>
                     </ul>
