@@ -93,7 +93,7 @@
             </ul>
 
             <ul class="ml-lg-auto list-unstyled m-0 nav-btn">
-                <li><a href="{{ route('contact.show') }}" class="btn btn-trans-white btn-circled">Contact Us</a></li>
+                <li><a href="{{ route('contact.create') }}" class="btn btn-trans-white btn-circled">Contact Us</a></li>
             </ul>
         </div> <!-- / .navbar-collapse -->
     </div> <!-- / .Container -->
@@ -179,7 +179,7 @@
                         </li>
 
                         <li>
-                            <a href="{{ route('contact.show') }}">
+                            <a href="{{ route('contact.create') }}">
                                 Contact
                             </a>
                         </li>

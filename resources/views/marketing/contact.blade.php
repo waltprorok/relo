@@ -24,7 +24,7 @@
             <div class="row">
                 <div class="col-lg-10 offset-lg-1">
                     <!-- Contacts Form -->
-                    <form class="contact_form" action="{{ route('contact.save') }}" method="post">
+                    <form class="contact_form" action="{{ route('contact.store') }}" method="post">
                         @csrf
                         <x-honeypot />
                         <div class="row">
@@ -57,9 +57,9 @@
                                     </label>
                                     <select class="form-control" name="status" aria-label="Default select example">
                                         <option value="">-- Select Option --</option>
-                                        <option value="1">Own</option>
-                                        <option value="2">Rent</option>
-                                        <option value="3">Other</option>
+                                        <option value="own">Own</option>
+                                        <option value="rent">Rent</option>
+                                        <option value="other">Other</option>
                                     </select>
 
                                     @if ($errors->has('status'))
@@ -123,11 +123,11 @@
                                     </label>
 
                                     <div class="input-group">
-                                        <input class="form-control" name="zip" id="zip" placeholder="12345" type="text" value="{{ old('zip') }}">
+                                        <input class="form-control" name="current_zip_code" id="current_zip_code" placeholder="12345" type="text" value="{{ old('current_zip_code') }}">
                                     </div>
-                                    @if ($errors->has('email'))
+                                    @if ($errors->has('current_zip_code'))
                                         <span class="help-block small text-danger">
-                                        <strong>{{ $errors->first('email') }}</strong>
+                                        <strong>{{ $errors->first('current_zip_code') }}</strong>
                                     </span>
                                     @endif
                                 </div>
@@ -143,11 +143,11 @@
                                     </label>
 
                                     <div class="input-group">
-                                        <input class="form-control" name="moving" id="moving" placeholder="Orlando, FL" type="text" value="{{ old('moving') }}">
+                                        <input class="form-control" name="moving_to_city" id="moving_to_city" placeholder="Orlando, FL" type="text" value="{{ old('moving_to_city') }}">
                                     </div>
-                                    @if ($errors->has('moving'))
+                                    @if ($errors->has('moving_to_city'))
                                         <span class="help-block small text-danger">
-                                        <strong>{{ $errors->first('moving') }}</strong>
+                                        <strong>{{ $errors->first('moving_to_city') }}</strong>
                                     </span>
                                     @endif
                                 </div>

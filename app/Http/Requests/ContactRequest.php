@@ -22,8 +22,8 @@ class ContactRequest extends FormRequest
             'status' => 'required',
             'email' => 'required|email',
             'phone' => 'required|min:10',
-            'zip' => 'required|min:5',
-            'moving' => 'required|min:5',
+            'current_zip_code' => 'required|min:5',
+            'moving_to_city' => 'required|min:5',
             'message' => 'required|min:3',
         ];
     }

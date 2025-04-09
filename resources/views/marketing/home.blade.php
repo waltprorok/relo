@@ -22,7 +22,7 @@
 
                     <!-- Button -->
                     <p class="mb-0">
-                        <a href="{{ route('contact.show') }}" class="btn btn-white btn-circled">
+                        <a href="{{ route('contact.create') }}" class="btn btn-white btn-circled">
                             Contact Us
                         </a>
                     </p>

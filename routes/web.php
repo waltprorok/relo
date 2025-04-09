@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\ContactController;
 use App\Http\Controllers\HomeController;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
@@ -20,8 +21,11 @@ Route::middleware(ProtectAgainstSpam::class)->group(function () {
 });
 
 Route::view('/', 'marketing.home')->name('home');
-Route::get('/contact', [HomeController::class, 'show'])->name('contact.show');
-Route::post('/contact', [HomeController::class, 'contactSave'])->name('contact.save')->middleware(ProtectAgainstSpam::class);
+//Route::get('/contact', [HomeController::class, 'show'])->name('contact.show');
+//Route::post('/contact', [HomeController::class, 'contactSave'])->name('contact.save')->middleware(ProtectAgainstSpam::class);
+
+Route::resource('contact', ContactController::class)->only(['create', 'store'])->middleware(ProtectAgainstSpam::class);
+
 
 Route::group(['middleware' => ['auth']], function () {
     Route::get('/dashboard', [HomeController::class, 'index'])->name('dashboard');
