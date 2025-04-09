@@ -109,7 +109,7 @@
             <div class="col-lg-4 col-sm-12">
                 <div class="footer-widget">
                     <!-- Brand -->
-                    <a href="index.html" class="footer-brand text-white">
+                    <a href="{{ route('home') }}" class="footer-brand text-white">
                         Relo
                     </a>
                     <p>Moving can be tricky, whether is up the road or across the country it helps to have a professional by your side.
