@@ -1,10 +1,10 @@
 @extends('layouts.app')
 @section('title', 'Contact Us')
-@include('partials.alerts')
 @section('content')
 
     <section class="section" id="contact">
         <div class="container">
+            @include('partials.alerts')
             <div class="row mb-4 mt-5">
                 <div class="col-lg-10 offset-lg-1">
                     <h5>We would love to connect with you?</h5>
@@ -23,15 +23,6 @@
 
             <div class="row">
                 <div class="col-lg-10 offset-lg-1">
-                    <!-- form message -->
-                    <div class="row">
-                        <div class="col-lg-8 offset-lg-2">
-                            <div class="alert alert-success contact__msg" style="display: none" role="alert">
-                                Your message was sent successfully.
-                            </div>
-                        </div>
-                    </div>
-                    <!-- end message -->
                     <!-- Contacts Form -->
                     <form class="contact_form" action="{{ route('contact.save') }}" method="post">
                         @csrf
