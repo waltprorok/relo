@@ -80,7 +80,7 @@
                                     </label>
 
                                     <div class="input-group ">
-                                        <input class="form-control" name="email" id="email"  placeholder="john@gmail.com" type="email" value="{{ old('email') }}">
+                                        <input class="form-control" name="email" id="email" placeholder="john@gmail.com" type="email" value="{{ old('email') }}">
                                     </div>
                                     @if ($errors->has('email'))
                                         <span class="help-block small text-danger">
@@ -163,7 +163,7 @@
                             </label>
 
                             <div class="input-group">
-                                <textarea class="form-control" rows="8" name="message" id="message"  placeholder="Hi there, I would like to get more information about...">{{ old('message') }}</textarea>
+                                <textarea class="form-control" rows="8" name="message" id="message" placeholder="Hi there, I would like to get more information about...">{{ old('message') }}</textarea>
                             </div>
                             @if ($errors->has('message'))
                                 <span class="help-block small text-danger">
