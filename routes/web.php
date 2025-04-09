@@ -1,5 +1,7 @@
 <?php
 
+use App\Http\Controllers\HomeController;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 use Spatie\Honeypot\ProtectAgainstSpam;
 
@@ -13,12 +15,16 @@ use Spatie\Honeypot\ProtectAgainstSpam;
 | be assigned to the "web" middleware group. Make something great!
 |
 */
-
-Auth::routes();
+Route::middleware(ProtectAgainstSpam::class)->group(function () {
+    Auth::routes();
+});
 
 Route::view('/', 'marketing.home')->name('home');
-Route::post('/contact', [App\Http\Controllers\HomeController::class, 'contact'])->name('contact')->middleware(ProtectAgainstSpam::class);
+Route::get('/contact', [HomeController::class, 'show'])->name('contact.show');
+Route::post('/contact', [HomeController::class, 'contactSave'])->name('contact.save')->middleware(ProtectAgainstSpam::class);
 
-Route::get('/dashboard', [App\Http\Controllers\HomeController::class, 'index'])->name('dashboard');
+Route::group(['middleware' => ['auth']], function () {
+    Route::get('/dashboard', [HomeController::class, 'index'])->name('dashboard');
+});
 
 
