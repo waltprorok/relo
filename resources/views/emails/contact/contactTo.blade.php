@@ -10,15 +10,14 @@ We have received your message!
 
 We'll get back to you in 1-2 business days.
 
-<hr>
+<br>
 
-<div>
-<img src="{{ asset('marketing/images/McQ.jpg') }}" alt="agent pic" width="100" height="120">
+<img src="{{ $message->embed(public_path() . '/marketing/images/McQ.jpg') }}" alt="agent pic" width="105" height="120">
 
 Michael McQuillan<br/>
 412-855-5420<br/>
 <a href="mailto:pghmcq@gmail.com">pghmcq@gmail.com</a>
-</div>
+
 @endcomponent
 
 @endcomponent
