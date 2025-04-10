@@ -57,6 +57,9 @@
                                     </label>
                                     <select class="form-control" name="status" aria-label="Default select example">
                                         <option value="">-- Select Option --</option>
+                                        @if(old('status'))
+                                            <option value="{{ old('status') }}" selected>{{ ucfirst(old('status')) }}</option>
+                                        @endif
                                         <option value="own">Own</option>
                                         <option value="rent">Rent</option>
                                         <option value="other">Other</option>
@@ -100,7 +103,7 @@
                                     </label>
 
                                     <div class="input-group ">
-                                        <input class="form-control" id="phone" name="phone" placeholder="617-643-4500" type="text" value="{{ old('phone') }}">
+                                        <input class="form-control" id="phone" name="phone" placeholder="321-555-1234" type="text" value="{{ old('phone') }}">
                                     </div>
                                     @if ($errors->has('phone'))
                                         <span class="help-block small text-danger">
