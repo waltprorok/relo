@@ -2,9 +2,7 @@
 
 namespace App\Mail;
 
-use App\Models\Contact;
 use Illuminate\Bus\Queueable;
-use Illuminate\Contracts\Queue\ShouldQueue;
 use Illuminate\Mail\Mailable;
 use Illuminate\Mail\Mailables\Address;
 use Illuminate\Mail\Mailables\Attachment;
@@ -12,7 +10,7 @@ use Illuminate\Mail\Mailables\Content;
 use Illuminate\Mail\Mailables\Envelope;
 use Illuminate\Queue\SerializesModels;
 
-class ContactForm extends Mailable
+class ContactFormToUser extends Mailable
 {
     use Queueable, SerializesModels;
 
@@ -44,8 +42,8 @@ class ContactForm extends Mailable
     public function envelope(): Envelope
     {
         return new Envelope(
-            from: new Address($this->email, $this->name),
-            subject: 'Relo New Contact Record!',
+            from: new Address('pghmcq@gmail.com', 'Michael McQuillan'),
+            subject: 'From Relo. Thanks for reaching out.',
         );
     }
 
@@ -55,7 +53,7 @@ class ContactForm extends Mailable
     public function content(): Content
     {
         return new Content(
-            markdown: 'emails.contact.contact',
+            markdown: 'emails.contact.contactTo',
         );
     }
 

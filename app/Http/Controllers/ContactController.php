@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Http\Requests\ContactRequest;
 use App\Mail\ContactForm;
+use App\Mail\ContactFormToUser;
 use App\Models\Contact;
 use Exception;
 use Illuminate\Http\Request;
@@ -45,6 +46,7 @@ class ContactController extends Controller
             ]);
 
             Mail::to('test@example.com')->send(new ContactForm($request));
+            Mail::to($request->get('email'))->send(new ContactFormToUser($request));
         } catch (Exception $exception) {
             Log::info($exception->getMessage());
         }
