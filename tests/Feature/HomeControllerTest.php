@@ -13,7 +13,6 @@ class HomeControllerTest extends TestCase
     public function setUp(): void
     {
         parent::setUp();
-        Mail::fake();
     }
 
     public function test_home_page_url_200()
