@@ -21,9 +21,6 @@ Route::middleware(ProtectAgainstSpam::class)->group(function () {
 });
 
 Route::view('/', 'marketing.home')->name('home');
-//Route::get('/contact', [HomeController::class, 'show'])->name('contact.show');
-//Route::post('/contact', [HomeController::class, 'contactSave'])->name('contact.save')->middleware(ProtectAgainstSpam::class);
-
 Route::resource('contact', ContactController::class)->only(['create', 'store'])->middleware(ProtectAgainstSpam::class);
 
 
