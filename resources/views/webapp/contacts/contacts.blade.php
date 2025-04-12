@@ -6,7 +6,7 @@
             <div class="card">
                 <div class="card-header">Contacts</div>
                 <div class="card-body">
-                    <table class="table">
+                    <table class="table table-responsive-md table-hover">
                         <thead>
                         <tr>
                             <th scope="col">Name</th>
