@@ -27,7 +27,11 @@ Route::view('/', 'marketing.home')->name('home');
 Route::resource('contact', ContactController::class)->only(['create', 'store'])->middleware(ProtectAgainstSpam::class);
 
 Route::group(['middleware' => ['auth']], function () {
-    Route::get('/dashboard', [ContactController::class, 'index'])->name('dashboard');
+    Route::get('/dashboard', [HomeController::class, 'index'])->name('dashboard');
+});
+
+Route::group(['middleware' => ['auth']], function () {
+    Route::get('/contacts', [ContactController::class, 'index'])->name('contacts');
 });
 
 Route::get('/mail-test', function() {

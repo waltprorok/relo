@@ -24,4 +24,9 @@ class Contact extends Model
         'replied' => 'boolean',
         'created_at' => 'datetime',
     ];
+
+    protected static function contactsCount(): int
+    {
+        return Contact::all()->count();
+    }
 }

@@ -93,6 +93,14 @@
                     <li class="nav-item">
                         <a href="{{ route('dashboard') }}"
                            class="nav-link {{ Route::currentRouteName() == 'dashboard' ? 'active' : '' }}">
+                            <i class="icon icon-speedometer "></i>Dashboard
+                        </a>
+                    </li>
+                </ul>
+                <ul class="nav">
+                    <li class="nav-item">
+                        <a href="{{ route('contacts') }}"
+                           class="nav-link {{ Route::currentRouteName() == 'contacts' ? 'active' : '' }}">
                             <i class="fa fa-paper-plane"></i>Contacts
                         </a>
                     </li>
@@ -102,9 +110,7 @@
 
         <div class="content">
             <div class="container-fluid">
-                <div class="row">
-                    @yield('content')
-                </div>
+                @yield('content')
             </div>
         </div>
     </div>
