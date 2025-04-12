@@ -32,6 +32,9 @@
                         @endforeach
                         </tbody>
                     </table>
+                    <span class="float-right">
+                    {{ $contacts->links() }}
+                    </span>
                 </div>
             </div>
         </div>
