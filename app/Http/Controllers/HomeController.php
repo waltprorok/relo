@@ -8,7 +8,6 @@ class HomeController extends Controller
 {
     public function index()
     {
-        $contacts = Contact::all();
-        return view('webapp.home', ['contacts' => $contacts]);
+        //
     }
 }

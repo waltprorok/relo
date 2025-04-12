@@ -2,6 +2,9 @@
 
 use App\Http\Controllers\ContactController;
 use App\Http\Controllers\HomeController;
+use App\Mail\ContactForm;
+use App\Mail\ContactFormToUser;
+use App\Models\Contact;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 use Spatie\Honeypot\ProtectAgainstSpam;
@@ -23,9 +26,18 @@ Route::middleware(ProtectAgainstSpam::class)->group(function () {
 Route::view('/', 'marketing.home')->name('home');
 Route::resource('contact', ContactController::class)->only(['create', 'store'])->middleware(ProtectAgainstSpam::class);
 
-
 Route::group(['middleware' => ['auth']], function () {
-    Route::get('/dashboard', [HomeController::class, 'index'])->name('dashboard');
+    Route::get('/dashboard', [ContactController::class, 'index'])->name('dashboard');
+});
+
+Route::get('/mail-test', function() {
+    $contact = Contact::factory()->make();
+    return new ContactForm($contact);
+});
+
+Route::get('/mail-test-to', function() {
+    $contact = Contact::factory()->make();
+    return new ContactFormToUser($contact);
 });
 
 
