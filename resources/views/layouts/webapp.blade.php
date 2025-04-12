@@ -52,25 +52,25 @@
                 </a>
 
                 <div class="dropdown-menu dropdown-menu-right">
-                    <div class="dropdown-header">Account</div>
+{{--                    <div class="dropdown-header">Account</div>--}}
 
-                    <a href="#" class="dropdown-item">
-                        <i class="fa fa-user"></i> Profile
-                    </a>
+{{--                    <a href="#" class="dropdown-item">--}}
+{{--                        <i class="fa fa-user"></i> Profile--}}
+{{--                    </a>--}}
 
-                    <a href="#" class="dropdown-item">
-                        <i class="fa fa-envelope"></i> Messages
-                    </a>
+{{--                    <a href="#" class="dropdown-item">--}}
+{{--                        <i class="fa fa-envelope"></i> Messages--}}
+{{--                    </a>--}}
 
-                    <div class="dropdown-header">Settings</div>
+{{--                    <div class="dropdown-header">Settings</div>--}}
 
-                    <a href="#" class="dropdown-item">
-                        <i class="fa fa-bell"></i> Notifications
-                    </a>
+{{--                    <a href="#" class="dropdown-item">--}}
+{{--                        <i class="fa fa-bell"></i> Notifications--}}
+{{--                    </a>--}}
 
-                    <a href="#" class="dropdown-item">
-                        <i class="fa fa-wrench"></i> Settings
-                    </a>
+{{--                    <a href="#" class="dropdown-item">--}}
+{{--                        <i class="fa fa-wrench"></i> Settings--}}
+{{--                    </a>--}}
 
                     <a id="logout-link" class="dropdown-item" href="{{ route('logout') }}"
                        onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
