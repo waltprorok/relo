@@ -47,7 +47,7 @@
 
             <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                    <img src="{{ asset('webapp/imgs/avatar-1.png') }}" class="avatar avatar-sm" alt="logo">
+                    <i class="fa fa-user" aria-hidden="true"></i>
                     <span class="small ml-1 d-md-down-none">{{ Auth::user()->name }}</span>
                 </a>
 
