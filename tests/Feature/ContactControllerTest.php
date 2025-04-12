@@ -19,7 +19,7 @@ class ContactControllerTest extends TestCase
 
     public function test_contact_page_url_200()
     {
-        $response = $this->get('/');
+        $response = $this->get('/contact/create');
 
         $response->assertOk();
     }
