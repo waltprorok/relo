@@ -1,7 +1,6 @@
 @extends('layouts.webapp')
 @section('title', 'Dashboard')
 @section('content')
-
     <div class="col-12">
         <div class="card">
             <div class="card-header">Contacts</div>
