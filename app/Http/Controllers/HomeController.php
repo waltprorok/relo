@@ -8,6 +8,7 @@ class HomeController extends Controller
 {
     public function index()
     {
-        return view('webapp.index');
+        $contactsCount = Contact::all()->count();
+        return view('webapp.index', ['contactsCount' => $contactsCount]);
     }
 }

@@ -28,9 +28,6 @@ Route::resource('contact', ContactController::class)->only(['create', 'store'])-
 
 Route::group(['middleware' => ['auth']], function () {
     Route::get('/dashboard', [HomeController::class, 'index'])->name('dashboard');
-});
-
-Route::group(['middleware' => ['auth']], function () {
     Route::get('/contacts', [ContactController::class, 'index'])->name('contacts');
 });
 
