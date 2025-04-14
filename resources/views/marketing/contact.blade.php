@@ -32,7 +32,7 @@
                             <div class="col-md-6 mb-6">
                                 <div class="form-group">
                                     <label class="h6 small d-block text-uppercase">
-                                        Your name
+                                        Name
                                         <span class="text-danger">*</span>
                                     </label>
 
@@ -52,7 +52,7 @@
                             <div class="col-sm-6 mb-6">
                                 <div class="form-group">
                                     <label class="h6 small d-block text-uppercase">
-                                        Your Current Housing Status
+                                        Current Housing Status
                                         <span class="text-danger">*</span>
                                     </label>
                                     <select class="form-control" name="status" aria-label="Default select example">
@@ -77,7 +77,7 @@
                             <div class="col-md-6 mb-6">
                                 <div class="form-group">
                                     <label class="h6 small d-block text-uppercase">
-                                        Your email address
+                                        Email address
                                         <span class="text-danger">*</span>
                                     </label>
 
@@ -97,7 +97,7 @@
                             <div class="col-sm-6 mb-6">
                                 <div class="form-group">
                                     <label class="h6 small d-block text-uppercase">
-                                        Your Phone Number
+                                        Phone Number
                                         <span class="text-danger">*</span>
                                     </label>
 
@@ -140,7 +140,7 @@
                             <div class="col-md-6 mb-6">
                                 <div class="form-group">
                                     <label class="h6 small d-block text-uppercase">
-                                        Where are we moving to?
+                                        Where are you moving to?
                                         <span class="text-danger">*</span>
                                     </label>
 
