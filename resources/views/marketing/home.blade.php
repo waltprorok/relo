@@ -36,45 +36,45 @@
 <section class="section bg-grey" id="about">
     <div class="container">
         <div class="row justy-content-center">
-            <div class="col-lg-3 col-sm-6 col-md-6">
+            <div class="col-lg-4 col-sm-6 col-md-6">
                 <div class="text-center feature-block">
                     <div class="img-icon-block mb-4">
                         <i class="ti-thumb-up"></i>
                     </div>
-                    <h4 class="mb-2">The right advice</h4>
-                    <p>Our team are experts in matching you with the right provider.</p>
+                    <h4 class="mb-2">Moving</h4>
+                    <p>Moving, whether across the street or across the country, can be stressful.  But don’t worry, we know people, and now you do too!</p>
                 </div>
             </div>
 
-            <div class="col-lg-3 col-sm-6 col-md-6">
+            <div class="col-lg-4 col-sm-6 col-md-6">
                 <div class="text-center feature-block">
                     <div class="img-icon-block mb-4">
                         <i class="ti-cup"></i>
                     </div>
-                    <h4 class="mb-2">Recognised for excellence</h4>
-                    <p>We've been awarded for our high rate of customer satisfaction.</p>
+                    <h4 class="mb-2">Priority</h4>
+                    <p>Our priority is making sure that you are in the right hands throughout the process of buying, selling, or both, anywhere in the country.  </p>
                 </div>
             </div>
 
-            <div class="col-lg-3 col-sm-6 col-md-6">
+            <div class="col-lg-4 col-sm-6 col-md-6">
                 <div class="text-center feature-block">
                     <div class="img-icon-block mb-4">
                         <i class="ti-wallet"></i>
                     </div>
-                    <h4 class="mb-2">Compare the best</h4>
-                    <p>We only compare market leaders with a reputation for service quality.</p>
+                    <h4 class="mb-2">Network</h4>
+                    <p>Our network of real estate agents and lenders are ready to help with your transition to a new home, a new city, a new beginning.</p>
                 </div>
             </div>
 
-            <div class="col-lg-3 col-sm-6 col-md-6">
-                <div class="text-center feature-block">
-                    <div class="img-icon-block mb-4">
-                        <i class="ti-dashboard"></i>
-                    </div>
-                    <h4 class="mb-2">Premium Services</h4>
-                    <p>We only compare market leaders with a reputation for service quality.</p>
-                </div>
-            </div>
+{{--            <div class="col-lg-3 col-sm-6 col-md-6">--}}
+{{--                <div class="text-center feature-block">--}}
+{{--                    <div class="img-icon-block mb-4">--}}
+{{--                        <i class="ti-dashboard"></i>--}}
+{{--                    </div>--}}
+{{--                    <h4 class="mb-2">Premium Services</h4>--}}
+{{--                    <p>We only compare market leaders with a reputation for service quality.</p>--}}
+{{--                </div>--}}
+{{--            </div>--}}
         </div>
     </div> <!-- / .container -->
 </section>
