@@ -17,7 +17,7 @@
 
                     <!-- Subheading -->
                     <p class="lead mb-5 pr-0">
-                        Relo is an experienced service provider helping our clients get from one location to their next.
+                        {{ config('app.name', 'Relo') }} is an experienced service provider helping our clients get from one location to their next.
                     </p>
 
                     <!-- Button -->
@@ -166,7 +166,7 @@
 
                 <div class="row">
                     <div class="col-lg-12">
-                        <p class="pl-3">Want to know more about this? <a href="#!">Contact us</a></p>
+                        <p class="pl-3">Want to know more about this? <a href="{{ route('contact.create') }}">Contact us</a></p>
                     </div>
                 </div>
             </div>

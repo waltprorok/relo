@@ -9,9 +9,9 @@
 {{--    <title>Relo Solutions</title>--}}
     <title>
         @if(View::hasSection('title'))
-            @yield('title') | {{ config('app.name', 'Relo Solutions') }}
+            @yield('title') | {{ config('app.name', 'Relo') }}
         @else
-            {{ config('app.name', 'Relo Solutions') }}
+            {{ config('app.name', 'Rel') }}
         @endif
     </title>
 
@@ -57,7 +57,7 @@
 <nav class="navbar navbar-expand-lg navbar-dark fixed-top site-navigation main-nav navbar-togglable trans-navigation">
     <div class="container">
         <a class="navbar-brand" href="{{ route('home') }}">
-            <h3>{{config('app.name')}}</h3>
+            <h3>{{ config('app.name') }}</h3>
         </a>
         <!-- Toggler -->
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse"

@@ -160,7 +160,7 @@
                         <!-- Input -->
                         <div class="form-group mb-5">
                             <label class="h6 small d-block text-uppercase">
-                                Tell us about yourself?
+                                Tell us about your relocation needs?
                                 <span class="text-danger">*</span>
                             </label>
 

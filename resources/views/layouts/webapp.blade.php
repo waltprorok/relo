@@ -6,9 +6,9 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>
         @if(View::hasSection('title'))
-            @yield('title') | {{ config('app.name', 'Relo Solutions') }}
+            @yield('title') | {{ config('app.name', 'Relo') }}
         @else
-            {{ config('app.name', 'Relo Solutions') }}
+            {{ config('app.name', 'Relo') }}
         @endif
     </title>
     <link rel="stylesheet" href="{{ asset('webapp/vendor/simple-line-icons/css/simple-line-icons.css') }}">
