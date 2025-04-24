@@ -84,14 +84,17 @@
         <div class="row ">
             <div class="col-lg-4">
                 <div class="service-img">
-                    <img src="{{asset('marketing/images/blog-lg.jpg') }}" alt="" class="img-fluid">
+                    <img src="{{ asset('marketing/images/blog-lg.jpg') }}" alt="" class="img-fluid">
                 </div>
             </div>
 
             <div class="col-lg-6 pl-4">
                 <div class="service-content">
-                    <h1>Get a better deal and start saving money today</h1>
-                    <p>We compare hundreds of leading products and plans across many categories to bring you the best value for money.</p>
+                    <h1>Get in touch with our professional team.</h1>
+                    <p>After years of working with buyers and sellers, home owners and investors, people moving both near and far, we noticed something.
+                        We noticed just how difficult it was for people to get started in the home buying/selling process.
+                        Epically if they were relocating to a new area.  Feedback from clients led us to understand that many are not quite sure who to call.
+                        From this ________ was formed.  Our nationwide network is designed to do one thing: to connect you with the best agents, lenders, legal professionals (if needed), and other services you may need to ensure a smooth transition to your new home.  Reach out to us today and we’ll get started on the path to your new home.</p>
                 </div>
             </div>
         </div>
@@ -113,7 +116,7 @@
                                                 <i class="ti-reload"></i>
                                             </div>
                                             <div class="service-inner-content media-body">
-                                                <h4>Backup System</h4>
+                                                <h4>The Right Advice</h4>
                                                 <p>Our team are experts in matching you with the right provider.</p>
                                             </div>
                                         </div>
@@ -124,8 +127,8 @@
                                                 <i class="ti-cloud"></i>
                                             </div>
                                             <div class="service-inner-content media-body">
-                                                <h4>Cloud Hosting</h4>
-                                                <p>Our team are experts in matching you with the right provider.</p>
+                                                <h4>Recognised For Excellence</h4>
+                                                <p>We've been awarded for our high rate of customer satisfaction.</p>
                                             </div>
                                         </div>
                                     </div>
@@ -142,8 +145,8 @@
                                                 <i class="ti-world"></i>
                                             </div>
                                             <div class="service-inner-content media-body">
-                                                <h4>Web hosting</h4>
-                                                <p>Our team are experts in matching you with the right provider.</p>
+                                                <h4>Compare the Best</h4>
+                                                <p>We only compare market leaders with a reputation for service quality.</p>
                                             </div>
                                         </div>
                                     </div>
@@ -153,8 +156,8 @@
                                                 <i class="ti-server"></i>
                                             </div>
                                             <div class="service-inner-content media-body">
-                                                <h4>Office Cloud</h4>
-                                                <p>Our team are experts in matching you with the right provider.</p>
+                                                <h4>Premium Services</h4>
+                                                <p>We only compare market leaders with a reputation for service quality.</p>
                                             </div>
                                         </div>
                                     </div>
@@ -186,7 +189,10 @@
 
                     <!-- Subheading -->
                     <p>
-                        Relo provides the most professional help needed when moving from state to state.
+                        With a quick phone call or email conversation we can get an idea of how best to move forward with your unique situation.
+                        The more information we have, the better your experience will be. Some of the questions to think about are below but please remember,
+                        if you don’t have all the answers, that’s ok, that’s what we are here for.  We can walk you through the entire process and make
+                        sure you know what to expect, help you prepare to sell, and take care of you wherever you're are moving.
                     </p>
 
                 </div>
