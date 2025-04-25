@@ -17,7 +17,7 @@
 
                     <!-- Subheading -->
                     <p class="lead mb-5 pr-0">
-                        {{ config('app.name', 'Relo') }} is an experienced service provider helping our clients get from one location to their next.
+                        {{ config('app.name', 'Relo') }} Ready to make your move? Let our relocation experts guide you home—contact us today and start your stress-free journey!.
                     </p>
 
                     <!-- Button -->
@@ -84,7 +84,7 @@
         <div class="row ">
             <div class="col-lg-4">
                 <div class="service-img">
-                    <img src="{{ asset('marketing/images/blog-lg.jpg') }}" alt="" class="img-fluid">
+                    <a href="{{ route('contact.create') }}"><img src="{{ asset('marketing/images/relo.png') }}" alt="" class="img-fluid"></a>
                 </div>
             </div>
 
@@ -94,7 +94,7 @@
                     <p>After years of working with buyers and sellers, home owners and investors, people moving both near and far, we noticed something.
                         We noticed just how difficult it was for people to get started in the home buying/selling process.
                         Epically if they were relocating to a new area.  Feedback from clients led us to understand that many are not quite sure who to call.
-                        From this ________ was formed.  Our nationwide network is designed to do one thing: to connect you with the best agents, lenders, legal professionals (if needed), and other services you may need to ensure a smooth transition to your new home.  Reach out to us today and we’ll get started on the path to your new home.</p>
+                        From this {{ config('app.name') }} was formed.  Our nationwide network is designed to do one thing: to connect you with the best agents, lenders, legal professionals (if needed), and other services you may need to ensure a smooth transition to your new home.  Reach out to us today and we’ll get started on the path to your new home.</p>
                 </div>
             </div>
         </div>
@@ -113,22 +113,22 @@
                                     <div class="col-lg-6">
                                         <div class="service-block media">
                                             <div class="service-icon">
-                                                <i class="ti-reload"></i>
+                                                <i class="ti-comment"></i>
                                             </div>
                                             <div class="service-inner-content media-body">
-                                                <h4>The Right Advice</h4>
-                                                <p>Our team are experts in matching you with the right provider.</p>
+                                                <h4>Advice</h4>
+                                                <p>Expert guidance in unfamiliar markets.</p>
                                             </div>
                                         </div>
                                     </div>
                                     <div class="col-lg-6">
                                         <div class="service-block media">
                                             <div class="service-icon">
-                                                <i class="ti-cloud"></i>
+                                                <i class="ti-pin-alt"></i>
                                             </div>
                                             <div class="service-inner-content media-body">
-                                                <h4>Recognised For Excellence</h4>
-                                                <p>We've been awarded for our high rate of customer satisfaction.</p>
+                                                <h4>Coordination</h4>
+                                                <p>Smooth coordination of selling and buying.</p>
                                             </div>
                                         </div>
                                     </div>
@@ -142,22 +142,22 @@
                                     <div class="col-lg-6">
                                         <div class="service-block media">
                                             <div class="service-icon">
-                                                <i class="ti-world"></i>
+                                                <i class="ti-thumb-up"></i>
                                             </div>
                                             <div class="service-inner-content media-body">
-                                                <h4>Compare the Best</h4>
-                                                <p>We only compare market leaders with a reputation for service quality.</p>
+                                                <h4>Trusted</h4>
+                                                <p>Access to trusted local and national networks.</p>
                                             </div>
                                         </div>
                                     </div>
                                     <div class="col-lg-6">
                                         <div class="service-block media">
                                             <div class="service-icon">
-                                                <i class="ti-server"></i>
+                                                <i class="ti-shine"></i>
                                             </div>
                                             <div class="service-inner-content media-body">
-                                                <h4>Premium Services</h4>
-                                                <p>We only compare market leaders with a reputation for service quality.</p>
+                                                <h4>Seamless</h4>
+                                                <p>Saves time, money, and moving-day stress.</p>
                                             </div>
                                         </div>
                                     </div>
@@ -192,7 +192,7 @@
                         With a quick phone call or email conversation we can get an idea of how best to move forward with your unique situation.
                         The more information we have, the better your experience will be. Some of the questions to think about are below but please remember,
                         if you don’t have all the answers, that’s ok, that’s what we are here for.  We can walk you through the entire process and make
-                        sure you know what to expect, help you prepare to sell, and take care of you wherever you're are moving.
+                        sure you know what to expect, help you prepare to sell, and take care of you wherever you're moving to.
                     </p>
 
                 </div>
@@ -204,24 +204,27 @@
                 <div class="process-block">
                     <img src="{{ asset('marketing/images/process/process-1.jpg') }}" alt="" class="img-fluid">
 
-                    <h3>Project Research</h3>
-                    <p>Nihil facere delectus eaque aut possimus nobis laudantium reprehenderit.</p>
+                    <h3>Local Expertise</h3>
+                    <p>Relocation agents have in-depth knowledge of the new area, including neighborhoods, schools,
+                        amenities, and commute times, helping buyers make informed decisions quickly.</p>
                 </div>
             </div>
             <div class="col-lg-4 col-sm-6 col-md-6">
                 <div class="process-block">
                     <img src="{{ asset('marketing/images/process/process-2.jpg') }}" alt="" class="img-fluid">
 
-                    <h3>Project demostration</h3>
-                    <p>Nihil facere delectus eaque aut possimus nobis laudantium reprehenderit.</p>
+                    <h3>Streamlined Process</h3>
+                    <p>We specialize in coordinating long-distance moves and can handle logistics like virtual tours,
+                        paperwork, and connecting buyers with trusted local professionals (inspectors, lenders, etc.).</p>
                 </div>
             </div>
             <div class="col-lg-4 col-sm-6 col-md-6">
                 <div class="process-block">
                     <img src="{{ asset('marketing/images/process/process-3.jpg') }}" alt="" class="img-fluid">
 
-                    <h3>Development & delivery</h3>
-                    <p>Nihil facere delectus eaque aut possimus nobis laudantium reprehenderit.</p>
+                    <h3>Personalized Support</h3>
+                    <p>We understand the stress of moving to a new city and provide tailored guidance, making the transition
+                        smoother and less overwhelming.</p>
                 </div>
             </div>
         </div>
@@ -234,11 +237,16 @@
         <div class="row">
             <div class="col-lg-6">
                 <div class="section-heading">
-                    <h1 class="text-white">We are trying to deliver 100% quality product and success their business to achieve ultimate goal.</h1>
+                    <h1 class="text-white">Moving to a new city? Don’t go it alone. Our relocation real estate experts make
+                        your move seamless—from finding the right neighborhood to closing on your dream home.
+                        We’re your local guide, personal advisor, and stress-reliever, all in one.</h1>
                 </div>
             </div>
             <div class="col-lg-6">
-                <p class="lead text-white">We are providing best service since 1990 to present , committed to best service delivery.Nullam metus enim, placerat in lacus vel, porttitor egestas libero. Etiam ex risus, feugiat eget accumsan eu, sagittis eu urna. In eget ultrices metus. Nunc accumsan </p>
+                <p class="lead text-white">Our relocation agency specializes in helping individuals and families
+                    transition smoothly when moving to a new area. With expert knowledge of local markets, we match
+                    clients with ideal homes, top schools, and convenient amenities—all while handling the details that
+                    make long-distance moves challenging. Whether you're relocating for work, family, or a fresh start, we provide personalized support every step of the way.</p>
             </div>
         </div>
     </div>
@@ -251,8 +259,8 @@
                 <div class="single-project">
                     <img src="{{ asset('marketing/images/projects/p-1.jpg') }}" alt="" class="img-fluid">
                     <div class="project-content">
-                        <h4>Project: onepage</h4>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate eligendi consequuntur veniam quod</p>
+                        <h4>Maximized Home Value</h4>
+                        <p>Relocation agents understand market trends and can guide you on pricing, staging, and timing to sell your home quickly and for top dollar.</p>
                     </div>
                 </div>
             </div>
@@ -260,8 +268,8 @@
                 <div class="single-project">
                     <img src="{{ asset('marketing/images/projects/p-4.jpg') }}" alt="" class="img-fluid">
                     <div class="project-content">
-                        <h4>Project: business</h4>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate eligendi consequuntur veniam quod</p>
+                        <h4>Coordinated Selling & Buying</h4>
+                        <p>They help align your home sale with your move to a new city, making sure timelines match and minimizing stress or overlap.</p>
                     </div>
                 </div>
             </div>
@@ -269,8 +277,9 @@
                 <div class="single-project">
                     <img src="{{ asset('marketing/images/projects/p-3.jpg') }}" alt="" class="img-fluid">
                     <div class="project-content">
-                        <h4>Project : Marketing</h4>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate eligendi consequuntur veniam quod</p>
+                        <h4>Access to a Trusted Network</h4>
+                        <p>Relocation agents often work with a national or global network, connecting you with reliable agents, movers,
+                            and services in both your current and future locations.</p>
                     </div>
                 </div>
             </div>
@@ -284,9 +293,11 @@
             </div>
             <div class="col-lg-4 col-md-12 col-sm-12 ">
                 <div class="project-content-block">
-                    <h4>Do you know who we are?</h4>
-                    <h2>More than just service your products...</h2>
-                    <p>Explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and we will give you a complete account of the system.</p>
+                    <h4>We love what we do!</h4>
+                    <h2>More than just service...</h2>
+                    <p>Working with a relocation real estate agent to ensure a smooth, stress-free move by expertly
+                        managing the sale of their current home while coordinating the transition to a new location. Our agents
+                        provide market expertise, timing strategy, and trusted connections to streamline the entire relocation process.</p>
                 </div>
             </div>
         </div>

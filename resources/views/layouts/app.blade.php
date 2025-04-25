@@ -110,7 +110,7 @@
                 <div class="footer-widget">
                     <!-- Brand -->
                     <a href="{{ route('home') }}" class="footer-brand text-white">
-                        Relo
+                        {{ config('app.name') }}
                     </a>
                     <p>Moving can be tricky, whether is up the road or across the country it helps to have a professional by your side.
                     </p>
