@@ -16,7 +16,10 @@ import { createApp } from 'vue';
 const app = createApp({});
 
 import Card from './components/card/Card.vue';
+import ContactList from './components/contacts/List.vue';
+
 app.component('card', Card);
+app.component('contactList', ContactList);
 
 /**
  * The following block of code may be used to automatically register your

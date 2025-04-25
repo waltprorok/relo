@@ -18,8 +18,8 @@ class ContactController extends Controller
      */
     public function index()
     {
-        $contacts = Contact::simplePaginate(10);
-        return view('webapp.contacts.contacts', ['contacts' => $contacts]);
+        $contacts = Contact::all();
+        return response()->json($contacts);
     }
 
     /**
