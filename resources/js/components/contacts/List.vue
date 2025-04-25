@@ -13,8 +13,15 @@
                     :loading="loading"
                     :class="classStyle"
                     @change="changeServer">
+        <template #status="data">
+            {{ capitalize(data.value.status) }}
+        </template>
         <template #email="data">
             <a :href="`mailto:${data.value.email}?subject=Relo Agent Connect&body=${data.value.message}`" class="text-primary hover:underline" @click.stop>{{ data.value.email }}</a>
+        </template>
+        <template #replied="data">
+            <i v-if="data.value.replied" class="fa fa-check" aria-hidden="true"></i>
+            <i v-else class="fa fa-times" aria-hidden="true"></i>
         </template>
         <template #action="data">
             <button type="button" class="btn btn-sm btn-outline-primary" data-toggle="modal" data-target="#exampleModal">
@@ -61,6 +68,11 @@ const cols = ref([
     {field: "action", title: "Action"},
 ]);
 
+function capitalize(word) {
+    if (!word) return '';
+    return word.charAt(0).toUpperCase() + word.slice(1);
+}
+
 const getContacts = async () => {
     try {
         loading.value = true;
@@ -71,7 +83,7 @@ const getContacts = async () => {
             // body: JSON.stringify(toRaw(params)),
         });
 
-    rows.value = await response.json();
+        rows.value = await response.json();
         // total_rows.value = data?.meta?.total;
     } catch {
         console.log('error');
