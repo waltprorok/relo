@@ -1,4 +1,35 @@
 <template>
+    <div v-if="showModal" class="modal-overlay">
+        <!-- Modal -->
+        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h6 class="modal-title" id="exampleModalLabel">Contact Message</h6>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"  @click="showModal=false">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <p>Name: {{ row.name }}<br>
+                        Status: {{ capitalize(row.status) }}</p>
+                        <p>Email: {{ capitalize(row.email) }}<br>
+                        Phone: {{ capitalize(row.phone) }}</p>
+                        <p>Current Zip Code: {{ capitalize(row.current_zip_code) }}<br>
+                        Moving To City: {{ capitalize(row.moving_to_city) }}</p>
+                        <p>Message:</p>
+                        {{ row.message }}
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal" @click="showModal=false">Close</button>
+<!--                        <button type="button" class="btn btn-primary">Save changes</button>-->
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- End of Modal -->
+    </div>
+
     <div class="fa-pull-right mb-2">
         <input v-model="params.search" type="text" class="form-control" placeholder="Search..." @keydown="$event.stopImmediatePropagation()"/>
     </div>
@@ -20,11 +51,11 @@
             <a :href="`mailto:${data.value.email}?subject=Relo Agent Connect&body=${data.value.message}`" class="text-primary hover:underline" @click.stop>{{ data.value.email }}</a>
         </template>
         <template #replied="data">
-            <i v-if="data.value.replied" class="fa fa-check" aria-hidden="true"></i>
-            <i v-else class="fa fa-times" aria-hidden="true"></i>
+            <i v-if="data.value.replied" class="fa fa-check btn-outline-success" aria-hidden="true"></i>
+            <i v-else class="fa fa-times btn-outline-danger" aria-hidden="true"></i>
         </template>
         <template #action="data">
-            <button type="button" class="btn btn-sm btn-outline-primary" data-toggle="modal" data-target="#exampleModal">
+            <button type="button" class="btn btn-sm btn-outline-primary" data-toggle="modal" data-target="#exampleModal" @click="openModal(data.value)">
                 <i class="fa fa-envelope"></i>
             </button>
             <a href="#" class="btn btn-sm btn-outline-secondary" role="button" title="edit"><i class="fa fa-edit"></i></a>
@@ -56,6 +87,8 @@ const params = reactive({
     column_filters: [],
 });
 const rows: any = ref(null);
+const showModal = ref(false);
+const row = {};
 
 const cols = ref([
     {field: "name", title: "Name"},
@@ -67,6 +100,12 @@ const cols = ref([
     {field: "replied", title: "Replied", type: "boolean"},
     {field: "action", title: "Action"},
 ]);
+
+function openModal(row) {
+    this.showModal = true;
+    this.row = row;
+
+}
 
 function capitalize(word) {
     if (!word) return '';
