@@ -76,8 +76,8 @@ onMounted(() => {
     getContacts();
 });
 
-const classStyle = "bh-table bh-table-striped bh-table-responsive bh-table-hover";
-const loading: any = ref(true);
+const classStyle: string = "bh-table bh-table-striped bh-table-responsive bh-table-hover";
+const loading: boolean = ref(true);
 const pageSizeOptions = [10, 25, 50, 100];
 const params = reactive({
     current_page: 1,
@@ -88,7 +88,7 @@ const params = reactive({
 });
 const rows: any = ref(null);
 const showModal = ref(false);
-const row = {};
+const row = ref({});
 
 const cols = ref([
     {field: "name", title: "Name"},
@@ -101,14 +101,13 @@ const cols = ref([
     {field: "action", title: "Action"},
 ]);
 
-function openModal(row) {
-    this.showModal = true;
-    this.row = row;
-
+function openModal(data) {
+    showModal.value = true;
+    row.value = data;
 }
 
 function capitalize(word) {
-    if (!word) return '';
+    if (! word) return '';
     return word.charAt(0).toUpperCase() + word.slice(1);
 }
 

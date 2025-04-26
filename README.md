@@ -20,7 +20,7 @@ Clone the repository
 
 Switch to the repo folder
 
-    cd relot
+    cd relo
 
 Install all the dependencies using composer
 
