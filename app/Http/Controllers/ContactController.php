@@ -7,7 +7,9 @@ use App\Mail\ContactForm;
 use App\Mail\ContactFormToUser;
 use App\Models\Contact;
 use Exception;
+use Illuminate\Http\JsonResponse;
 use Illuminate\Http\Request;
+use Illuminate\Http\Response;
 use Illuminate\Support\Facades\Log;
 use Illuminate\Support\Facades\Mail;
 
@@ -76,17 +78,30 @@ class ContactController extends Controller
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, Contact $contact)
+    public function update(Contact $contact)
     {
-        //
+        try {
+            $contact->update(['replied' => true]);
+        } catch (Exception $exception) {
+            Log::info($exception->getMessage());
+            return response()->json([], Response::HTTP_BAD_REQUEST);
+        }
+
+        return response()->json();
     }
 
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(Contact $contact)
+    public function destroy(Contact $contact): JsonResponse
     {
-        $contact->delete();
+        try {
+            $contact->delete();
+        } catch (Exception $exception) {
+            Log::info($exception->getMessage());
+            return response()->json([], Response::HTTP_BAD_REQUEST);
+        }
+
         return response()->json();
     }
 }

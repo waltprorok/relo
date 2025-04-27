@@ -71,7 +71,9 @@
                     :pageSize="params.pageSize"
                     :showPageSize="params.showPageSize"
                     :pageSizeOptions="pageSizeOptions"
-                    :sortable="false"
+                    :sortable="true"
+                    :sortColumn="params.sort_column"
+                    :sortDirection="params.sort_direction"
                     :search="params.search"
                     :loading="loading"
                     :class="classStyle"
@@ -80,7 +82,9 @@
             {{ capitalize(data.value.status) }}
         </template>
         <template #email="data">
-            <a :href="`mailto:${data.value.email}?subject=Relo Agent Connect&body=${data.value.message}`" class="text-primary hover:underline" @click.stop>{{ data.value.email }}</a>
+            <a :href="`mailto:${data.value.email}?subject=Relo Agent Connect&body=${data.value.message}`" class="text-primary hover:underline" @click.stop="updateReply(data.value.id)">
+                {{ data.value.email }}
+            </a>
         </template>
         <template #replied="data">
             <i v-if="data.value.replied" class="fa fa-check btn-outline-success" aria-hidden="true"></i>
@@ -121,6 +125,8 @@ const params = reactive({
     search: '',
     showPageSize: true,
     column_filters: [],
+    sort_column: 'created_at',
+    sort_direction: 'desc',
 });
 const row = ref({});
 const rows: any = ref(null);
@@ -169,6 +175,28 @@ const deleteContact = async () => {
 
         const response = await fetch('/web/contact/delete/' + row.value, {
             method: 'DELETE',
+            headers: {
+                'Content-Type': 'application/json',
+                'X-CSRF-TOKEN': (document.querySelector('meta[name="csrf-token"]') as HTMLMetaElement)?.content || '',
+            },
+        });
+
+        showModalDelete.value = false;
+
+        await getContacts();
+    } catch {
+        console.log('error');
+    }
+
+    loading.value = false;
+};
+
+const updateReply = async (contact) => {
+    try {
+        loading.value = true;
+
+        const response = await fetch('/web/contact/update/' + contact, {
+            method: 'PUT',
             headers: {
                 'Content-Type': 'application/json',
                 'X-CSRF-TOKEN': (document.querySelector('meta[name="csrf-token"]') as HTMLMetaElement)?.content || '',

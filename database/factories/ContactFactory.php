@@ -21,11 +21,12 @@ class ContactFactory extends Factory
             'name' => $this->faker->firstName() . ' ' . $this->faker->lastName(),
             'status' => 'own',
             'email' => $this->faker->unique()->safeEmail,
-            'phone' => $this->faker->phoneNumber(),
+            'phone' => $this->faker->numerify('###-###-####'),
             'current_zip_code' => $this->faker->numerify('#####'),
-            'moving_to_city' => 'Orlando, FL',
+            'moving_to_city' => $this->faker->randomElement(['Orlando, FL', 'Chicago, IL', 'Pittsburgh, PA', 'Boston, MA']),
             'message' =>  $this->faker->text(250),
-            'replied' => false,
+            'replied' => rand(0, 1),
+            'created_at' => $this->faker->dateTimeBetween('-2 years', 'now'),
         ];
     }
 }

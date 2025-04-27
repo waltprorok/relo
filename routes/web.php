@@ -33,6 +33,7 @@ Route::group(['middleware' => ['auth']], function () {
     Route::prefix('web')->group(function () {
         Route::get('contacts/list', [ContactController::class, 'index']);
         Route::delete('contact/delete/{contact}', [ContactController::class, 'destroy']);
+        Route::put('contact/update/{contact}', [ContactController::class, 'update']);
     });
 });
 
