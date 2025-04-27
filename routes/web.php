@@ -32,8 +32,10 @@ Route::group(['middleware' => ['auth']], function () {
 
     Route::prefix('web')->group(function () {
         Route::get('contacts/list', [ContactController::class, 'index']);
+        Route::delete('contact/delete/{contact}', [ContactController::class, 'destroy']);
     });
 });
+
 
 Route::get('/mail-test', function() {
     $contact = Contact::factory()->make();

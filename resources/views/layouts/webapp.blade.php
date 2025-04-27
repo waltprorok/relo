@@ -4,6 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!-- CSRF Token -->
+    <meta name="csrf-token" content="{{ csrf_token() }}">
+
     <title>
         @if(View::hasSection('title'))
             @yield('title') | {{ config('app.name', 'Relo') }}
@@ -14,6 +17,7 @@
     <link rel="stylesheet" href="{{ asset('webapp/vendor/simple-line-icons/css/simple-line-icons.css') }}">
     <link rel="stylesheet" href="{{ asset('webapp/vendor/font-awesome/css/fontawesome-all.min.css') }}">
     <link rel="stylesheet" href="{{ asset('webapp/css/styles.css') }}">
+    <link rel="stylesheet" href="{{ asset('webapp/css/stylesheet.css') }}">
     @vite(['resources/js/app.js'])  {{--    'resources/sass/app.scss'--}}
 </head>
 <body class="sidebar-fixed header-fixed">

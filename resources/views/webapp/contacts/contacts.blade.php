@@ -6,7 +6,7 @@
             <div class="card">
 {{--                <div class="card-header bg-light">Contacts</div>--}}
                 <div class="card-body">
-                <contact-list></contact-list>
+                    <contact-list></contact-list>
                 </div>
             </div>
         </div>

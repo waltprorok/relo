@@ -1,32 +1,64 @@
 <template>
-    <div v-if="showModal" class="modal-overlay">
-        <!-- Modal -->
-        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-            <div class="modal-dialog">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <h6 class="modal-title" id="exampleModalLabel">Contact Message</h6>
-                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"  @click="showModal=false">
-                            <span aria-hidden="true">&times;</span>
-                        </button>
-                    </div>
-                    <div class="modal-body">
-                        <p>Name: {{ row.name }}<br>
-                        Status: {{ capitalize(row.status) }}</p>
-                        <p>Email: {{ capitalize(row.email) }}<br>
-                        Phone: {{ capitalize(row.phone) }}</p>
-                        <p>Current Zip Code: {{ capitalize(row.current_zip_code) }}<br>
-                        Moving To City: {{ capitalize(row.moving_to_city) }}</p>
-                        <p>Message:</p>
-                        {{ row.message }}
-                    </div>
-                    <div class="modal-footer">
-                        <button type="button" class="btn btn-secondary" data-dismiss="modal" @click="showModal=false">Close</button>
-<!--                        <button type="button" class="btn btn-primary">Save changes</button>-->
+    <div v-if="showModal">
+        <transition name="modal">
+            <!-- Modal -->
+            <div class="modal-mask">
+                <div class="modal-wrapper">
+                    <div class="modal-dialog" role="document">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h6 class="modal-title">Contact Message</h6>
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close" @click="showModal=false">
+                                    <span aria-hidden="true">&times;</span>
+                                </button>
+                            </div>
+                            <div class="modal-body">
+                                <p>Name: {{ row.name }}<br>
+                                    Status: {{ capitalize(row.status) }}</p>
+                                <p>Email: {{ capitalize(row.email) }}<br>
+                                    Phone: {{ capitalize(row.phone) }}</p>
+                                <p>Current Zip Code: {{ capitalize(row.current_zip_code) }}<br>
+                                    Moving To City: {{ capitalize(row.moving_to_city) }}</p>
+                                <p>Message:</p>
+                                {{ row.message }}
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-dismiss="modal" @click="showModal=false">Close</button>
+                                <!--                        <button type="button" class="btn btn-primary">Save changes</button>-->
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
+            <!-- End of Modal -->
+        </transition>
+    </div>
+
+    <!-- Modal -->
+    <div v-if="showModalDelete">
+        <transition name="modal">
+            <div class="modal-mask">
+                <div class="modal-wrapper">
+                    <div class="modal-dialog" role="document">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h6 class="modal-title" id="deleteModalLabel">Delete Contact Record</h6>
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close" @click="showModalDelete=false">
+                                    <span aria-hidden="true">&times;</span>
+                                </button>
+                            </div>
+                            <div class="modal-body">
+                                <p>Do you want to delete this contact record?</p>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-dismiss="modal" @click="showModalDelete=false">Close</button>
+                                <button type="button" class="btn btn-danger" @click="deleteContact(row.value)">Delete</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </transition>
         <!-- End of Modal -->
     </div>
 
@@ -55,11 +87,13 @@
             <i v-else class="fa fa-times btn-outline-danger" aria-hidden="true"></i>
         </template>
         <template #action="data">
-            <button type="button" class="btn btn-sm btn-outline-primary" data-toggle="modal" data-target="#exampleModal" @click="openModal(data.value)">
+            <button type="button" class="btn btn-sm btn-outline-primary" @click="openModal(data.value)">
                 <i class="fa fa-envelope"></i>
             </button>
-            <a href="#" class="btn btn-sm btn-outline-secondary" role="button" title="edit"><i class="fa fa-edit"></i></a>
-            <a href="#" class="btn btn-sm btn-outline-danger" role="button" title="delete"><i class="fa fa-trash"></i></a>
+            <!--            <a href="#" class="btn btn-sm btn-outline-secondary" role="button" title="edit"><i class="fa fa-edit"></i></a>-->
+            <button type="button" class="btn btn-sm btn-outline-danger" data-toggle="modal" data-target="#eleteModal" @click="openDeleteModal(data.value.id)">
+                <i class="fa fa-trash"></i>
+            </button>
         </template>
     </vue3-datatable>
 </template>
@@ -88,6 +122,7 @@ const params = reactive({
 });
 const rows: any = ref(null);
 const showModal = ref(false);
+const showModalDelete = ref(false);
 const row = ref({});
 
 const cols = ref([
@@ -107,9 +142,37 @@ function openModal(data) {
 }
 
 function capitalize(word) {
-    if (! word) return '';
+    if (!word) return '';
     return word.charAt(0).toUpperCase() + word.slice(1);
 }
+
+function openDeleteModal(data) {
+    showModalDelete.value = true;
+    row.value = data;
+}
+
+const deleteContact = async () => {
+    try {
+        loading.value = true;
+
+        const response = await fetch('/web/contact/delete/' + row.value, {
+            method: 'DELETE',
+            headers: {
+                'Content-Type': 'application/json',
+                'X-CSRF-TOKEN': (document.querySelector('meta[name="csrf-token"]') as HTMLMetaElement)?.content || '',
+            },
+
+        });
+
+        showModalDelete.value = false;
+
+        await getContacts();
+    } catch {
+        console.log('error');
+    }
+
+    loading.value = false;
+};
 
 const getContacts = async () => {
     try {
@@ -117,12 +180,12 @@ const getContacts = async () => {
 
         const response = await fetch('/web/contacts/list', {
             method: 'GET',
-            // headers: {'Content-Type': 'application/json'},
+            headers: {'Content-Type': 'application/json'},
             // body: JSON.stringify(toRaw(params)),
         });
 
         rows.value = await response.json();
-        // total_rows.value = data?.meta?.total;
+
     } catch {
         console.log('error');
     }
