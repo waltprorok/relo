@@ -71,7 +71,7 @@
                     :pageSize="params.pageSize"
                     :showPageSize="params.showPageSize"
                     :pageSizeOptions="pageSizeOptions"
-                    :sortable="true"
+                    :sortable="false"
                     :search="params.search"
                     :loading="loading"
                     :class="classStyle"
@@ -86,18 +86,20 @@
             <i v-if="data.value.replied" class="fa fa-check btn-outline-success" aria-hidden="true"></i>
             <i v-else class="fa fa-times btn-outline-danger" aria-hidden="true"></i>
         </template>
+        <template #created_at="data">
+            {{ formatDate(new Date(data.value.created_at)) }}
+        </template>
         <template #action="data">
             <button type="button" class="btn btn-sm btn-outline-primary" @click="openModal(data.value)">
                 <i class="fa fa-envelope"></i>
             </button>
-            <!--            <a href="#" class="btn btn-sm btn-outline-secondary" role="button" title="edit"><i class="fa fa-edit"></i></a>-->
+            <!--<a href="#" class="btn btn-sm btn-outline-secondary" role="button" title="edit"><i class="fa fa-edit"></i></a>-->
             <button type="button" class="btn btn-sm btn-outline-danger" data-toggle="modal" data-target="#eleteModal" @click="openDeleteModal(data.value.id)">
                 <i class="fa fa-trash"></i>
             </button>
         </template>
     </vue3-datatable>
 </template>
-
 
 <script setup lang="ts">
 // https://github.com/bhaveshpatel200/vue3-datatable-document/blob/main/pages/sorting.vue
@@ -111,7 +113,7 @@ onMounted(() => {
 });
 
 const classStyle: string = "bh-table bh-table-striped bh-table-responsive bh-table-hover";
-const loading: boolean = ref(true);
+const loading = ref(true);
 const pageSizeOptions = [10, 25, 50, 100];
 const params = reactive({
     current_page: 1,
@@ -120,10 +122,10 @@ const params = reactive({
     showPageSize: true,
     column_filters: [],
 });
+const row = ref({});
 const rows: any = ref(null);
 const showModal = ref(false);
 const showModalDelete = ref(false);
-const row = ref({});
 
 const cols = ref([
     {field: "name", title: "Name"},
@@ -132,9 +134,19 @@ const cols = ref([
     {field: "phone", title: "Phone"},
     {field: "current_zip_code", title: "Current Zip"},
     {field: "moving_to_city", title: "Moving To City"},
+    {field: "created_at", title: "Submitted"},
     {field: "replied", title: "Replied", type: "boolean"},
     {field: "action", title: "Action"},
 ]);
+
+// gets date formatted as yyyy-MM-dd
+function formatDate(date: Date): string {
+    const year = date.getFullYear()
+    const month = String(date.getMonth() + 1).padStart(2, '0')
+    const day = String(date.getDate()).padStart(2, '0')
+
+    return `${year}-${month}-${day}`
+}
 
 function openModal(data) {
     showModal.value = true;
@@ -161,7 +173,6 @@ const deleteContact = async () => {
                 'Content-Type': 'application/json',
                 'X-CSRF-TOKEN': (document.querySelector('meta[name="csrf-token"]') as HTMLMetaElement)?.content || '',
             },
-
         });
 
         showModalDelete.value = false;
@@ -196,8 +207,8 @@ const getContacts = async () => {
 const changeServer = (data: any) => {
     params.current_page = data.current_page;
     params.pageSize = data.pageSize;
-    params.sort_column = data.sort_column;
-    params.sort_direction = data.sort_direction;
+    // params.sort_column = data.sort_column;
+    // params.sort_direction = data.sort_direction;
 
     getContacts();
 };
