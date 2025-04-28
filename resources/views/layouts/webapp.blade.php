@@ -29,7 +29,7 @@
             </a>
 
             <a class="navbar-brand" href="#">
-                <img src="{{ asset('webapp/imgs/logo.png') }}" alt="logo">
+                <img src="{{ asset('webapp/imgs/logo-1.png') }}" alt="logo">
             </a>
 
             <a href="#" class="btn btn-link sidebar-toggle d-md-down-none">
