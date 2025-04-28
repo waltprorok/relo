@@ -20,7 +20,7 @@
                                 <p>Current Zip Code: {{ capitalize(row.current_zip_code) }}<br>
                                     Moving To City: {{ capitalize(row.moving_to_city) }}</p>
                                 <p>Message:</p>
-                                {{ row.message }}
+                                <textarea class="form-control" rows="10" disabled style="background-color: #fffcfc; color: #0a0a0a">{{ row.message }}</textarea>
                             </div>
                             <div class="modal-footer">
                                 <button type="button" class="btn btn-secondary" data-dismiss="modal" @click="showModal=false">Close</button>
