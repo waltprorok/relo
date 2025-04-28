@@ -9,6 +9,12 @@ class HomeController extends Controller
     public function index()
     {
         $contactsCount = Contact::all()->count();
-        return view('webapp.index', ['contactsCount' => $contactsCount]);
+        $unRepliedContactsCount = Contact::where('replied', false)->count();
+        $repliedContactsCount = Contact::where('replied', true)->count();
+        return view('webapp.index', [
+            'contactsCount' => $contactsCount,
+            'repliedContactsCount' => $repliedContactsCount,
+            'unRepliedContactsCount' => $unRepliedContactsCount
+        ]);
     }
 }

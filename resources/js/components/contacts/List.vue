@@ -20,7 +20,7 @@
                                 <p>Current Zip Code: {{ capitalize(row.current_zip_code) }}<br>
                                     Moving To City: {{ capitalize(row.moving_to_city) }}</p>
                                 <p>Message:</p>
-                                <textarea class="form-control" rows="10" disabled style="background-color: #fffcfc; color: #0a0a0a">{{ row.message }}</textarea>
+                                <textarea class="form-control" rows="10" disabled style="background-color: #f7f7fb; color: #0a0a0a">{{ row.message }}</textarea>
                             </div>
                             <div class="modal-footer">
                                 <button type="button" class="btn btn-secondary" data-dismiss="modal" @click="showModal=false">Close</button>
@@ -98,7 +98,7 @@
                 <i class="fa fa-envelope"></i>
             </button>
             <!--<a href="#" class="btn btn-sm btn-outline-secondary" role="button" title="edit"><i class="fa fa-edit"></i></a>-->
-            <button type="button" class="btn btn-sm btn-outline-danger" data-toggle="modal" data-target="#eleteModal" @click="openDeleteModal(data.value.id)">
+            <button type="button" class="btn btn-sm btn-outline-danger" @click="openDeleteModal(data.value.id)">
                 <i class="fa fa-trash"></i>
             </button>
         </template>
