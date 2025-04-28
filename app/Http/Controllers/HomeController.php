@@ -11,6 +11,7 @@ class HomeController extends Controller
         $contactsCount = Contact::all()->count();
         $unRepliedContactsCount = Contact::where('replied', false)->count();
         $repliedContactsCount = Contact::where('replied', true)->count();
+
         return view('webapp.index', [
             'contactsCount' => $contactsCount,
             'repliedContactsCount' => $repliedContactsCount,
