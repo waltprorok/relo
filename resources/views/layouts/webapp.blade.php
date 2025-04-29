@@ -40,27 +40,40 @@
             </a>
 
             <ul class="navbar-nav ml-auto">
-                <li class="nav-item d-md-down-none">
-                    <a href="#">
-                        <i class="fa fa-bell"></i>
-                        <span class="badge badge-pill badge-danger">0</span>
-                    </a>
-                </li>
+{{--                <li class="nav-item d-md-down-none">--}}
+{{--                    <a href="#">--}}
+{{--                        <i class="fa fa-bell"></i>--}}
+{{--                        <span class="badge badge-pill badge-danger">0</span>--}}
+{{--                    </a>--}}
+{{--                </li>--}}
 
-                <li class="nav-item d-md-down-none">
-                    <a href="#">
-                        <i class="fa fa-envelope-open"></i>
-                        <span class="badge badge-pill badge-danger">0</span>
-                    </a>
-                </li>
+{{--                <li class="nav-item d-md-down-none">--}}
+{{--                    <a href="#">--}}
+{{--                        <i class="fa fa-envelope-open"></i>--}}
+{{--                        <span class="badge badge-pill badge-danger">0</span>--}}
+{{--                    </a>--}}
+{{--                </li>--}}
 
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                         <i class="fa fa-user" aria-hidden="true"></i>
-                        <span class="small ml-1 d-md-down-none">{{ Auth::user()->name }}</span>
+                        <span class="small ml-1 d-md-down-none"></span>
                     </a>
 
                     <div class="dropdown-menu dropdown-menu-right">
+                        <a class="dropdown-item" href="{{ route('user.account.show') }}">
+                            <i class="fa fa-user-circle" aria-hidden="true"></i>Account
+                        </a>
+
+                        <a id="logout-link" class="dropdown-item" href="{{ route('logout') }}"
+                           onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
+                            <i class="fa fa-sign-out-alt" aria-hidden="true"></i>Logout
+                        </a>
+
+                        <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                            @csrf
+                        </form>
+
                         {{--                    <div class="dropdown-header">Account</div>--}}
 
                         {{--                    <a href="#" class="dropdown-item">--}}
@@ -80,15 +93,6 @@
                         {{--                    <a href="#" class="dropdown-item">--}}
                         {{--                        <i class="fa fa-wrench"></i> Settings--}}
                         {{--                    </a>--}}
-
-                        <a id="logout-link" class="dropdown-item" href="{{ route('logout') }}"
-                           onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
-                            <i class="fa fa-sign-out-alt" aria-hidden="true"></i>Logout
-                        </a>
-
-                        <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
-                            @csrf
-                        </form>
                     </div>
                 </li>
             </ul>
@@ -118,7 +122,9 @@
             </div>
 
             <div class="content">
+                @include('partials.alerts')
                 <div class="container-fluid">
+
                     @yield('content')
                 </div>
             </div>
