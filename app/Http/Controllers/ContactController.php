@@ -48,7 +48,7 @@ class ContactController extends Controller
                 'message' => $request->get('message'),
             ]);
 
-            Mail::to('waltprorok@gmail.com')->send(new ContactForm($request));
+            Mail::to('pghmcq@gmail.com')->send(new ContactForm($request)); // pghmcq@gmail.com
             Mail::to($request->get('email'))->send(new ContactFormToUser($request));
         } catch (Exception $exception) {
             Log::info($exception->getMessage());
