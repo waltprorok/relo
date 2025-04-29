@@ -38,17 +38,19 @@ Route::group(['middleware' => ['auth']], function () {
         Route::delete('contact/delete/{contact}', [ContactController::class, 'destroy']);
         Route::put('contact/update/{contact}', [ContactController::class, 'update']);
     });
+
+    Route::get('/mail-test', function() {
+        $contact = Contact::factory()->make();
+        return new ContactForm($contact);
+    });
+
+    Route::get('/mail-test-to', function() {
+        $contact = Contact::factory()->make();
+        return new ContactFormToUser($contact);
+    });
 });
 
 
-Route::get('/mail-test', function() {
-    $contact = Contact::factory()->make();
-    return new ContactForm($contact);
-});
 
-Route::get('/mail-test-to', function() {
-    $contact = Contact::factory()->make();
-    return new ContactFormToUser($contact);
-});
 
 
