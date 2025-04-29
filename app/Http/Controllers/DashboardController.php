@@ -4,13 +4,13 @@ namespace App\Http\Controllers;
 
 use App\Models\Contact;
 
-class HomeController extends Controller
+class DashboardController extends Controller
 {
     public function index()
     {
         $contactsCount = Contact::all()->count();
-        $unRepliedContactsCount = Contact::where('replied', false)->count();
-        $repliedContactsCount = Contact::where('replied', true)->count();
+        $unRepliedContactsCount = Contact::query()->where('replied', false)->count();
+        $repliedContactsCount = Contact::query()->where('replied', true)->count();
 
         return view('webapp.index', [
             'contactsCount' => $contactsCount,
