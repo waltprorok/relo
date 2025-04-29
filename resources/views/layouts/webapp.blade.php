@@ -14,11 +14,14 @@
             {{ config('app.name', 'Relo') }}
         @endif
     </title>
+
     <link rel="stylesheet" href="{{ asset('webapp/vendor/simple-line-icons/css/simple-line-icons.css') }}">
     <link rel="stylesheet" href="{{ asset('webapp/vendor/font-awesome/css/fontawesome-all.min.css') }}">
     <link rel="stylesheet" href="{{ asset('webapp/css/styles.css') }}">
     <link rel="stylesheet" href="{{ asset('webapp/css/stylesheet.css') }}">
+
     @vite(['resources/js/app.js'])  {{--    'resources/sass/app.scss'--}}
+
 </head>
 <body class="sidebar-fixed header-fixed">
 <div id="app">
@@ -122,12 +125,12 @@
         </div>
     </div>
 </div>
-@yield('scripts')
+
 <script src="{{ asset('webapp/vendor/jquery/jquery.min.js') }}"></script>
 <script src="{{ asset('webapp/vendor/popper.js/popper.min.js') }}"></script>
 <script src="{{ asset('webapp/vendor/bootstrap/js/bootstrap.min.js') }}"></script>
-<script src="{{ asset('webapp/vendor/chart.js/chart.min.js') }}"></script>
+{{--<script src="{{ asset('webapp/vendor/chart.js/chart.min.js') }}"></script>--}}
 <script src="{{ asset('webapp/js/carbon.js') }}"></script>
-<script src="{{ asset('webapp/js/demo.js') }}"></script>
+{{--<script src="{{ asset('webapp/js/demo.js') }}"></script>--}}
 </body>
 </html>

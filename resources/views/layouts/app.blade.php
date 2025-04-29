@@ -11,7 +11,7 @@
         @if(View::hasSection('title'))
             @yield('title') | {{ config('app.name', 'Relo') }}
         @else
-            {{ config('app.name', 'Rel') }}
+            {{ config('app.name', 'Relo Agent Connect') }}
         @endif
     </title>
 
@@ -117,42 +117,42 @@
                 </div>
             </div>
 
+{{--            <div class="col-lg-3 ml-lg-auto col-sm-12">--}}
+{{--                <div class="footer-widget">--}}
+{{--                    <h3>Account</h3>--}}
+{{--                    <!-- Links -->--}}
+{{--                    <ul class="footer-links ">--}}
+{{--                        <li>--}}
+{{--                            <a href="#!">--}}
+{{--                                Terms and conditions--}}
+{{--                            </a>--}}
+{{--                        </li>--}}
+{{--                        <li>--}}
+{{--                            <a href="#!">--}}
+{{--                                Privacy policy--}}
+{{--                            </a>--}}
+{{--                        </li>--}}
+{{--                        <li>--}}
+{{--                            <a href="#!">--}}
+{{--                                Affiliate services--}}
+{{--                            </a>--}}
+{{--                        </li>--}}
+{{--                        <li>--}}
+{{--                            <a href="#!">--}}
+{{--                                Help and support--}}
+{{--                            </a>--}}
+{{--                        </li>--}}
+{{--                        <li>--}}
+{{--                            <a href="#!">--}}
+{{--                                Frequently Asked Question--}}
+{{--                            </a>--}}
+{{--                        </li>--}}
+{{--                    </ul>--}}
+{{--                </div>--}}
+{{--            </div>--}}
+
+
             <div class="col-lg-3 ml-lg-auto col-sm-12">
-                <div class="footer-widget">
-                    <h3>Account</h3>
-                    <!-- Links -->
-                    <ul class="footer-links ">
-                        <li>
-                            <a href="#!">
-                                Terms and conditions
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#!">
-                                Privacy policy
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#!">
-                                Affiliate services
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#!">
-                                Help and support
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#!">
-                                Frequently Asked Question
-                            </a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-
-
-            <div class="col-lg-2 col-sm-6">
                 <div class="footer-widget">
                     <h3>About</h3>
                     <!-- Links -->
@@ -187,24 +187,24 @@
                 </div>
             </div>
 
-            <div class="col-lg-2 col-sm-6">
-                <div class="footer-widget">
-                    <h3>Socials</h3>
-                    <!-- Links -->
-                    <ul class="list-unstyled footer-links">
-                        <li><a href="https://www.facebook.com/themefisher"><i class="fab fa-facebook-f"></i>Facebook</a></li>
-                        <li>
-                            <a href="https://www.twitter.com/themefisher"><i class="fab fa-twitter"></i>Twitter
-                            </a></li>
-                        <li><a href="https://www.pinterest.com/themefisher/"><i class="fab fa-pinterest-p"></i>Pinterest
-                            </a></li>
-                        <li><a href="https://themefisher.com/"><i class="fab fa-linkedin"></i>linkedin
-                            </a></li>
-                        <li><a href="https://www.youtube.com/channel/UCx9qVW8VF0LmTi4OF2F8YdA"><i class="fab fa-youtube"></i>YouTube
-                            </a></li>
-                    </ul>
-                </div>
-            </div>
+{{--            <div class="col-lg-2 col-sm-6">--}}
+{{--                <div class="footer-widget">--}}
+{{--                    <h3>Socials</h3>--}}
+{{--                    <!-- Links -->--}}
+{{--                    <ul class="list-unstyled footer-links">--}}
+{{--                        <li><a href="https://www.facebook.com/themefisher"><i class="fab fa-facebook-f"></i>Facebook</a></li>--}}
+{{--                        <li>--}}
+{{--                            <a href="https://www.twitter.com/themefisher"><i class="fab fa-twitter"></i>Twitter--}}
+{{--                            </a></li>--}}
+{{--                        <li><a href="https://www.pinterest.com/themefisher/"><i class="fab fa-pinterest-p"></i>Pinterest--}}
+{{--                            </a></li>--}}
+{{--                        <li><a href="https://themefisher.com/"><i class="fab fa-linkedin"></i>linkedin--}}
+{{--                            </a></li>--}}
+{{--                        <li><a href="https://www.youtube.com/channel/UCx9qVW8VF0LmTi4OF2F8YdA"><i class="fab fa-youtube"></i>YouTube--}}
+{{--                            </a></li>--}}
+{{--                    </ul>--}}
+{{--                </div>--}}
+{{--            </div>--}}
         </div> <!-- / .row -->
 
         <div class="row text-right pt-5">
@@ -236,8 +236,8 @@
 <!-- Slick Slider -->
 <script src="{{ asset('marketing/plugins/slick-carousel/slick/slick.min.js') }}"></script>
 <!-- Google Map -->
-<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCcABaamniA6OL5YvYSpB3pFMNrXwXnLwU"></script>
-<script src="{{ asset('marketing/plugins/google-map/gmap.js') }}"></script>
+{{--<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCcABaamniA6OL5YvYSpB3pFMNrXwXnLwU"></script>--}}
+{{--<script src="{{ asset('marketing/plugins/google-map/gmap.js') }}"></script>--}}
 
 <script src="{{ asset('marketing/js/script.js') }}"></script>
 
