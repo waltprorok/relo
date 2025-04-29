@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\ContactController;
 use App\Http\Controllers\HomeController;
+use App\Http\Controllers\UserController;
 use App\Mail\ContactForm;
 use App\Mail\ContactFormToUser;
 use App\Models\Contact;
@@ -29,6 +30,8 @@ Route::resource('contact', ContactController::class)->only(['create', 'store'])-
 Route::group(['middleware' => ['auth']], function () {
     Route::get('/dashboard', [HomeController::class, 'index'])->name('dashboard');
     Route::view('/contacts', 'webapp.contacts.contacts')->name('contacts');
+    Route::get('user/account', [UserController::class, 'show'])->name('user.account.show');
+    Route::post('/user/account', [UserController::class, 'update'])->name('user.account.update');
 
     Route::prefix('web')->group(function () {
         Route::get('contacts/list', [ContactController::class, 'index']);
