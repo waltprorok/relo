@@ -7,10 +7,11 @@
     <div class="card-body">
         <form class="form-horizontal" method="POST" action="{{ route('user.account.update') }}">
             @csrf
+            @method('put')
             <div class="row mb-5">
                 <div class="col-md-4 mb-4">
                     <div>User Profile</div>
-                    <div class="text-muted small">Update name and email.</div>
+                    <div class="text-muted small">Update name and or email.</div>
                 </div>
 
                 <div class="col-md-8">
