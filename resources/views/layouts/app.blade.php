@@ -214,7 +214,7 @@
                     <p class="footer-copy">
                         Copyright &copy; <script>const CurrentYear = new Date().getFullYear()
                             document.write(CurrentYear)
-                        </script>. Developed by <a class="current-year" href="/">Artemis</a>
+                        </script>. Developed by <a class="current-year" href="https://www.linkedin.com/in/walter-prorok/" target="_blank">Artemis</a>
                     </p>
                 </div>
             </div>
