@@ -18,7 +18,6 @@
     <!-- Mobile Specific Metas
     ================================================== -->
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="description" content="Corporate Html5 Template">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
     <meta name="generator" content="Theme">
     <meta name="description" content="Relo Agent Connect Ready to make your move? Let our relocation experts guide you home—contact us today and start your stress-free journey!.">
