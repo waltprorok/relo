@@ -45,7 +45,7 @@ class ContactForm extends Mailable
     {
         return new Envelope(
             from: new Address($this->email, $this->name),
-            subject: 'Relo New Contact Record!',
+            subject: 'Relo Agent Connect - New Contact Message',
         );
     }
 
