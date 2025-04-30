@@ -9,9 +9,9 @@
 
     <title>
         @if(View::hasSection('title'))
-            @yield('title') | {{ config('app.name', 'Relo') }}
+            @yield('title') | {{ config('app.name', 'Relo Agent Connect') }}
         @else
-            {{ config('app.name', 'Relo') }}
+            {{ config('app.name', 'Relo Agent Connect') }}
         @endif
     </title>
 
