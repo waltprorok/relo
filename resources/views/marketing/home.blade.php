@@ -17,7 +17,7 @@
 
                     <!-- Subheading -->
                     <p class="lead mb-5 pr-0">
-                        {{ config('app.name', 'Relo') }} Ready to make your move? Let our relocation experts guide you home—contact us today and start your stress-free journey!.
+                        {{ config('app.name', 'Relo') }} Ready to make your move? Let our relocation experts guide you home—contact us today and start your stress-free journey!
                     </p>
 
                     <!-- Button -->

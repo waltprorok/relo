@@ -9,7 +9,7 @@
 {{--    <title>Relo Solutions</title>--}}
     <title>
         @if(View::hasSection('title'))
-            @yield('title') | {{ config('app.name', 'Relo') }}
+            @yield('title') | {{ config('app.name', 'Relo Agent Connect') }}
         @else
             {{ config('app.name', 'Relo Agent Connect') }}
         @endif
@@ -20,8 +20,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="description" content="Corporate Html5 Template">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
-    <meta name="author" content="Walter Prorok">
     <meta name="generator" content="Theme">
+    <meta name="description" content="Relo Agent Connect Ready to make your move? Let our relocation experts guide you home—contact us today and start your stress-free journey!.">
+    <meta name="author" content="Walter Prorok">
+    <meta name="keywords" content="relocation agent, moving to another state, help finding a real estate agent for moving, relocation expert, relocation experts">
     <meta name="robots" content="index, follow, max-image-preview:standard">
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
