@@ -43,7 +43,7 @@ class ContactFormToUser extends Mailable
     {
         return new Envelope(
             from: new Address('pghmcq@gmail.com', 'Michael McQuillan'),
-            subject: 'From Relo. Thanks for reaching out.',
+            subject: 'From Relo Agent Connect. Thanks for reaching out.',
         );
     }
 
