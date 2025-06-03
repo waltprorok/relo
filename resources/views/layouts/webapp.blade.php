@@ -124,7 +124,6 @@
             <div class="content">
                 @include('partials.alerts')
                 <div class="container-fluid">
-
                     @yield('content')
                 </div>
             </div>
