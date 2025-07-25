@@ -12,12 +12,12 @@
                         <div class="banner-content2 text-center style-2">
                             <!-- Heading -->
                             <h1 class="display-4 mb-4 ">
-                                Relo Agent Connect <br> Industry Leading Relocation Services
+                                Industry Leading Relocation Services
                             </h1>
 
                             <!-- Subheading -->
                             <p class="lead mb-5 pr-0">
-                                {{ config('app.name', 'Relo') }} Ready to make your move but don’t know where to start?
+                                Ready to make your move but don’t know where to start?
                                 Let our relocation experts guide you home. Down the street, across town, or cross-country, we’re here to help.
                                 Contact us today for a FREE consultation.
                             </p>
