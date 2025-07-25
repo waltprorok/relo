@@ -18,7 +18,7 @@
                         marketing features that help home sellers target buyers whose needs match specific property features.
                     </p>
 
-                    <h2>Personal Information</h2>
+                    <h3>Personal Information</h3>
 
                     <p>Personally identifiable information collected may include:
                     </p>
@@ -29,27 +29,27 @@
                     <p>Access to this information is limited to those who need it to provide products or services.
                     </p>
 
-                    <h2>Sharing Information</h2>
+                    <h3>Sharing Information</h3>
                     <p>Relo Agent Connect may share certain customer and former customer information among its affiliated companies.</p>
 
-                    <h2>Cookies</h2>
+                    <h3>Cookies</h3>
                     <p>We may use "cookies" to track visitor behavior. A cookie is a small piece of data stored by your browser,
                         used to personalize navigation, remember preferences, or show contact information for your sales agent as you browse our site.</p>
 
-                    <h2>Links to Other Websites</h2>
+                    <h3>Links to Other Websites</h3>
                     <p>Clicking links to third-party websites subjects you to their respective privacy policies.
                         While we support privacy protection, we are not responsible for third-party practices.</p>
 
-                    <h2>Legal Disclosure</h2>
+                    <h3>Legal Disclosure</h3>
                     <p>We may disclose information if we believe it is necessary to identify, contact, or take legal action against someone violating our terms or causing harm to Relo Agent Connect,
                         its property, or its users. We may also access account information when necessary to enhance our services.
                     </p>
 
-                    <h2>Privacy Policy Changes</h2>
+                    <h3>Privacy Policy Changes</h3>
                     <p>Relo Agent Connect reserves the right to change this Privacy Policy at any time without notice. Revisions take effect upon posting on our websites.
                     </p>
 
-                    <h2>Acceptance of Terms</h2>
+                    <h3>Acceptance of Terms</h3>
                     <p>By using this site, you agree to our Privacy Policy. If you do not agree, please discontinue use. Continued use of this site or affiliated sites constitutes acceptance of this
                         policy.
                     </p>
