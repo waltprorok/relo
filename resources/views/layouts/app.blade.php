@@ -123,12 +123,12 @@
                     <!-- Links -->
                     <ul class="footer-links ">
                         <li>
-                            <a href="#!">
+                            <a href="{{ route('terms-and-conditions') }}">
                                 Terms and conditions
                             </a>
                         </li>
                         <li>
-                            <a href="#!">
+                            <a href="{{ route('privacy-policy') }}">
                                 Privacy policy
                             </a>
                         </li>
@@ -191,13 +191,13 @@
                     <h3>Socials</h3>
                     <!-- Links -->
                     <ul class="list-unstyled footer-links">
-                        <li><a href="https://www.facebook.com/themefisher"><i class="fab fa-facebook-f"></i>Facebook</a></li>
+                        <li><a href="https://www.facebook.com" target="_blank"><i class="fab fa-facebook-f"></i>Facebook</a></li>
 {{--                        <li>--}}
-{{--                            <a href="https://www.twitter.com/themefisher"><i class="fab fa-twitter"></i>Twitter--}}
+{{--                            <a href="https://www.twitter.com"><i class="fab fa-twitter"></i>Twitter--}}
 {{--                            </a></li>--}}
-{{--                        <li><a href="https://www.pinterest.com/themefisher/"><i class="fab fa-pinterest-p"></i>Pinterest--}}
+{{--                        <li><a href="https://www.pinterest.com/"><i class="fab fa-pinterest-p"></i>Pinterest--}}
 {{--                            </a></li>--}}
-                        <li><a href="https://themefisher.com/"><i class="fab fa-linkedin"></i>linkedin
+                        <li><a href="https://linkedin.com/" target="_blank"><i class="fab fa-linkedin"></i>linkedin
                             </a></li>
 {{--                        <li><a href="https://www.youtube.com/channel/UCx9qVW8VF0LmTi4OF2F8YdA"><i class="fab fa-youtube"></i>YouTube--}}
 {{--                            </a></li>--}}

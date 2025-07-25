@@ -25,6 +25,8 @@ Route::middleware(ProtectAgainstSpam::class)->group(function () {
 });
 
 Route::view('/', 'marketing.home')->name('home');
+Route::view('/terms-and-conditions', 'marketing.terms-and-conditions')->name('terms-and-conditions');
+Route::view('/privacy-policy', 'marketing.privacy-policy')->name('privacy-policy');
 Route::resource('contact', ContactController::class)->only(['create', 'store'])->middleware(ProtectAgainstSpam::class);
 
 Route::group(['middleware' => ['auth']], function () {
