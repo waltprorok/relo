@@ -71,24 +71,24 @@
             <!-- Links -->
             <ul class="navbar-nav ">
                 <li class="nav-item ">
-                    <a href="{{ url('/#about') }}" class="nav-link js-scroll-trigger">
-                        About
+                    <a href="{{ url('/#who-we-are') }}" class="nav-link js-scroll-trigger">
+                        Who We Are
                     </a>
                 </li>
                 <li class="nav-item ">
-                    <a href="{{ url('/#services') }}" class="nav-link js-scroll-trigger">
-                        Services
+                    <a href="{{ url('/#what-we-do') }}" class="nav-link js-scroll-trigger">
+                        What We Do
                     </a>
                 </li>
                 <li class="nav-item ">
-                    <a href="{{ url('/#process') }}" class="nav-link js-scroll-trigger">
-                        Process
+                    <a href="{{ url('/#what-to-expect') }}" class="nav-link js-scroll-trigger">
+                        What To Expect
                     </a>
                 </li>
 
                 <li class="nav-item ">
-                    <a href="{{ url('/#section-testimonial') }}" class="nav-link js-scroll-trigger">
-                        Testimonies
+                    <a href="{{ url('/#success-stories') }}" class="nav-link js-scroll-trigger">
+                        Success Stories
                     </a>
                 </li>
             </ul>
@@ -113,69 +113,67 @@
                     <a href="{{ route('home') }}" class="footer-brand text-white">
                         {{ config('app.name') }}
                     </a>
-                    <p>Moving can be tricky, whether is up the road or across the country it helps to have a professional by your side.
-                    </p>
+                    <p>Moving can be tricky, whether is up the road or across the country it helps to have a professional by your side.</p>
                 </div>
             </div>
 
-{{--            <div class="col-lg-3 ml-lg-auto col-sm-12">--}}
-{{--                <div class="footer-widget">--}}
-{{--                    <h3>Account</h3>--}}
-{{--                    <!-- Links -->--}}
-{{--                    <ul class="footer-links ">--}}
-{{--                        <li>--}}
-{{--                            <a href="#!">--}}
-{{--                                Terms and conditions--}}
-{{--                            </a>--}}
-{{--                        </li>--}}
-{{--                        <li>--}}
-{{--                            <a href="#!">--}}
-{{--                                Privacy policy--}}
-{{--                            </a>--}}
-{{--                        </li>--}}
-{{--                        <li>--}}
-{{--                            <a href="#!">--}}
-{{--                                Affiliate services--}}
-{{--                            </a>--}}
-{{--                        </li>--}}
-{{--                        <li>--}}
-{{--                            <a href="#!">--}}
-{{--                                Help and support--}}
-{{--                            </a>--}}
-{{--                        </li>--}}
-{{--                        <li>--}}
-{{--                            <a href="#!">--}}
-{{--                                Frequently Asked Question--}}
-{{--                            </a>--}}
-{{--                        </li>--}}
-{{--                    </ul>--}}
-{{--                </div>--}}
-{{--            </div>--}}
-
+            <div class="col-lg-3 ml-lg-auto col-sm-12">
+                <div class="footer-widget">
+                    <h3>Account</h3>
+                    <!-- Links -->
+                    <ul class="footer-links ">
+                        <li>
+                            <a href="#!">
+                                Terms and conditions
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#!">
+                                Privacy policy
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#!">
+                                Affiliate services
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#!">
+                                Help and support
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#!">
+                                Frequently Asked Question
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
 
             <div class="col-lg-3 ml-lg-auto col-sm-12">
                 <div class="footer-widget">
-                    <h3>About</h3>
+                    <h3>Links</h3>
                     <!-- Links -->
                     <ul class="footer-links">
                         <li>
-                            <a href="{{ url('/#about') }}">
-                                About Us
+                            <a href="{{ url('/#who-we-are') }}">
+                                Who We Are
                             </a>
                         </li>
                         <li>
-                            <a href="{{ url('/#services') }}">
-                                Services
+                            <a href="{{ url('/#what-we-do') }}">
+                                What We Do
                             </a>
                         </li>
                         <li>
-                            <a href="{{ url('/#process') }}">
-                                Process
+                            <a href="{{ url('/#what-to-expect') }}">
+                                What To Expect
                             </a>
                         </li>
                         <li>
-                            <a href="{{ url('/#section-testimonial') }}">
-                                Testimonies
+                            <a href="{{ url('/#success-stories') }}">
+                                Success Stories
                             </a>
                         </li>
 
@@ -188,24 +186,24 @@
                 </div>
             </div>
 
-{{--            <div class="col-lg-2 col-sm-6">--}}
-{{--                <div class="footer-widget">--}}
-{{--                    <h3>Socials</h3>--}}
-{{--                    <!-- Links -->--}}
-{{--                    <ul class="list-unstyled footer-links">--}}
-{{--                        <li><a href="https://www.facebook.com/themefisher"><i class="fab fa-facebook-f"></i>Facebook</a></li>--}}
+            <div class="col-lg-2 col-sm-6">
+                <div class="footer-widget">
+                    <h3>Socials</h3>
+                    <!-- Links -->
+                    <ul class="list-unstyled footer-links">
+                        <li><a href="https://www.facebook.com/themefisher"><i class="fab fa-facebook-f"></i>Facebook</a></li>
 {{--                        <li>--}}
 {{--                            <a href="https://www.twitter.com/themefisher"><i class="fab fa-twitter"></i>Twitter--}}
 {{--                            </a></li>--}}
 {{--                        <li><a href="https://www.pinterest.com/themefisher/"><i class="fab fa-pinterest-p"></i>Pinterest--}}
 {{--                            </a></li>--}}
-{{--                        <li><a href="https://themefisher.com/"><i class="fab fa-linkedin"></i>linkedin--}}
-{{--                            </a></li>--}}
+                        <li><a href="https://themefisher.com/"><i class="fab fa-linkedin"></i>linkedin
+                            </a></li>
 {{--                        <li><a href="https://www.youtube.com/channel/UCx9qVW8VF0LmTi4OF2F8YdA"><i class="fab fa-youtube"></i>YouTube--}}
 {{--                            </a></li>--}}
-{{--                    </ul>--}}
-{{--                </div>--}}
-{{--            </div>--}}
+                    </ul>
+                </div>
+            </div>
         </div> <!-- / .row -->
 
         <div class="row text-right pt-5">
