@@ -445,7 +445,7 @@
                     <div class="section-heading">
                         <!-- Heading -->
                         <h2 class="mb-5 pr-0">Start your stress-free journey home!</h2>
-
+                        <hr>
                         <p class="mb-0">
                             <a href="{{ route('contact.create') }}" class="btn btn-primary btn-circled">
                                 Contact Us
