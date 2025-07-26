@@ -145,7 +145,7 @@
     <section class="section" id="what-we-do">
         <div class="container">
             <div class="row justify-content-center">
-                <div class="col-md-8 col-lg-6 text-center">
+                <div class="col-md-8 col-lg-8 text-center">
                     <div class="section-heading">
                         <!-- Heading -->
                         <h2 class="section-title">
