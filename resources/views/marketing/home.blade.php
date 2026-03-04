@@ -292,7 +292,7 @@
                         <img src="{{ asset('marketing/images/projects/p-3.jpg') }}" alt="" class="img-fluid">
                         <div class="project-content">
                             <h4>Access to a Trusted Network</h4>
-                            <p>Our relocation agents work with a national or global network, connecting you with reliable agents, movers, and services in both your current and future locations.</p>
+                            <p>Our relocation agents work with a national network connecting you with reliable agents, movers, and services in both your current and future locations.</p>
                         </div>
                     </div>
                 </div>
