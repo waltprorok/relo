@@ -16,7 +16,7 @@ We'll get back to you in 1-2 business days.
 
 Michael McQuillan<br/>
 412-855-5420<br/>
-<a href="mailto:pghmcq@gmail.com">pghmcq@gmail.com</a>
+<a href="mailto:inforeloconnect@gmail.com">inforeloconnect@gmail.com</a>
 
 @endcomponent
 
