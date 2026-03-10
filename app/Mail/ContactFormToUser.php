@@ -42,7 +42,7 @@ class ContactFormToUser extends Mailable
     public function envelope(): Envelope
     {
         return new Envelope(
-            from: new Address('pghmcq@gmail.com', 'Michael McQuillan'),
+            from: new Address('inforeloconnect@gmail.com', 'Michael McQuillan'),
             subject: 'From Relo Agent Connect. Thanks for reaching out.',
         );
     }
