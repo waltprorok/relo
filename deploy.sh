@@ -5,6 +5,8 @@ git pull
 php artisan migrate --force
 export COMPOSER_ALLOW_SUPERUSER=1
 composer install --prefer-dist --no-dev --optimize-autoloader --no-interaction
+#sudo chown -R www-data:www-data storage bootstrap/cache
+#sudo chmod -R 775 storage bootstrap/cache
 php artisan optimize:clear
 php artisan event:clear
 npm ci

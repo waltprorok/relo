@@ -191,7 +191,7 @@
                     <h3>Socials</h3>
                     <!-- Links -->
                     <ul class="list-unstyled footer-links">
-                        <li><a href="https://www.facebook.com" target="_blank"><i class="fab fa-facebook-f"></i>Facebook</a></li>
+                        <li><a href="https://www.facebook.com/profile.php?id=100090230923853" target="_blank"><i class="fab fa-facebook-f"></i>Facebook</a></li>
 {{--                        <li>--}}
 {{--                            <a href="https://www.twitter.com"><i class="fab fa-twitter"></i>Twitter--}}
 {{--                            </a></li>--}}
