@@ -2,11 +2,8 @@
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
 
 <head>
-
-    <!-- Basic Page Needs
-    ================================================== -->
     <meta charset="utf-8">
-{{--    <title>Relo Solutions</title>--}}
+
     <title>
         @if(View::hasSection('title'))
             @yield('title') | {{ config('app.name', 'Relo Agent Connect') }}
@@ -15,18 +12,35 @@
         @endif
     </title>
 
-    <!-- Mobile Specific Metas
-    ================================================== -->
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
-    <meta name="generator" content="Theme">
-    <meta name="description" content="Relo Agent Connect Ready to make your move? Let our relocation experts guide you home—contact us today and start your stress-free journey!.">
-    <meta name="author" content="Walter Prorok">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Relo Agent Connects you with experienced real estate agents who can help make your relocation and move to a new area easier.">
     <meta name="keywords" content="relocation agent, moving to another state, help finding a real estate agent for moving, relocation expert, relocation experts">
-    <meta name="robots" content="index, follow, max-image-preview:standard">
+    <meta name="author" content="Walter Prorok">
+    <meta name="robots" content="index, follow, max-image-preview:large">
+
+    <link rel="canonical" href="{{ url()->current() }}">
+    {{-- Open Graph --}}
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="en_US">
+    <meta property="og:site_name" content="Relo Agent Connect">
+    <meta property="og:title" content="Relo Agent Connect">
+    <meta property="og:description" content="A simple way for real estate agents to connect and support clients everywhere.">
+    <meta property="og:url" content="{{ url()->current() }}">
+    <meta property="og:image" content="{{ asset('marketing/images/social-preview-v1.png') }}">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:type" content="image/png">
+    <meta property="og:image:alt" content="Relo Agent Connect">
+    {{-- Twitter / X --}}
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Relo Agent Connect">
+    <meta name="twitter:description" content="A simple way for real estate agents to connect and support clients everywhere.">
+    <meta name="twitter:image" content="{{ asset('marketing/images/social-preview-v1.png') }}">
+    <meta name="twitter:image:alt" content="Relo Agent Connect">
+    {{-- Apple Touch Icon --}}
+    <link rel="apple-touch-icon" sizes="180x180" href="{{ asset('marketing/images/apple-touch-icon.png') }}">
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
-
     <!-- bootstrap -->
     <link rel="stylesheet" href="{{ asset('marketing/plugins/bootstrap/bootstrap.min.css') }}">
     <!-- Animate -->
@@ -39,13 +53,10 @@
     <!-- Slick Carousel CSS -->
     <link rel="stylesheet" href="{{ asset('marketing/plugins/slick-carousel/slick/slick.css') }}">
     <link rel="stylesheet" href="{{ asset('marketing/plugins/slick-carousel/slick/slick-theme.css') }}">
-
     <!-- Main Stylesheet -->
     <link rel="stylesheet" href="{{ asset('/marketing/css/style.css') }}">
-
     <!--Favicon-->
     <link rel="icon" href="{{ asset('favicon.ico') }}" type="image/x-icon">
-
 </head>
 <body id="top-header">
 
