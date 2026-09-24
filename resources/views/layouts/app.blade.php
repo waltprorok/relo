@@ -57,6 +57,8 @@
     <link rel="stylesheet" href="{{ asset('/marketing/css/style.css') }}">
     <!--Favicon-->
     <link rel="icon" href="{{ asset('favicon.ico') }}" type="image/x-icon">
+    <!-- Google Console -->
+    <meta name="google-site-verification" content="slbe5cuqPm08JFX3WD7BlUTkEjop6n2XwSV2XaWIO_w" />
 </head>
 <body id="top-header">
 
