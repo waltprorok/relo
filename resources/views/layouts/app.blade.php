@@ -24,7 +24,7 @@
     <meta property="og:locale" content="en_US">
     <meta property="og:site_name" content="Relo Agent Connect">
     <meta property="og:title" content="Relo Agent Connect">
-    <meta property="og:description" content="A simple way for real estate agents to connect and support clients everywhere.">
+    <meta property="og:description" content="Relo Agent Connects you with experienced real estate agents who can help make your relocation and move to a new area easier.">
     <meta property="og:url" content="{{ url()->current() }}">
     <meta property="og:image" content="{{ asset('marketing/images/social-preview-v1.png') }}">
     <meta property="og:image:width" content="1200">
@@ -34,7 +34,7 @@
     {{-- Twitter / X --}}
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Relo Agent Connect">
-    <meta name="twitter:description" content="A simple way for real estate agents to connect and support clients everywhere.">
+    <meta name="twitter:description" content="Relo Agent Connects you with experienced real estate agents who can help make your relocation and move to a new area easier.">
     <meta name="twitter:image" content="{{ asset('marketing/images/social-preview-v1.png') }}">
     <meta name="twitter:image:alt" content="Relo Agent Connect">
     {{-- Apple Touch Icon --}}
